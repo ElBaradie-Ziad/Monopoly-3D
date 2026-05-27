@@ -1,0 +1,305 @@
+[gd_scene format=3 uid="uid://bq13w7x85bvh5"]
+
+[ext_resource type="PackedScene" uid="uid://q4qtbq0t3leg" path="res://assets/Temple_map/Map2_JungleTemple.glb" id="1_6ngnx"]
+[ext_resource type="PackedScene" uid="uid://ddiiwpuvuwu3h" path="res://assets/models/board/plateau.tscn" id="2_gmstj"]
+[ext_resource type="Script" uid="uid://de8h0p41ok4xk" path="res://assets/models/board/map_dimensions.gd" id="3_x7dkp"]
+
+[sub_resource type="Animation" id="Animation_556xv"]
+resource_name = "Main_menu_turn"
+length = 67.833336
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Camera3D3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8.411433, 12.866667, 16.055445, 18.614555, 21.4, 28.7, 35.933334, 43.366665, 61),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-6, 24, -5), Vector3(-6, 8, -5), Vector3(-20, 9, -5), Vector3(-20.331, 10, -11.693), Vector3(-19, 10, -15), Vector3(-17.064, 10, -17.29), Vector3(-10, 10, -21), Vector3(-10, 8, -14), Vector3(-6.3, 4, -22.4), Vector3(-5.3, 13, -6)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Camera3D3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 8.411433, 12.856668, 16.055445, 18.614555, 21.4, 28.7, 35.933334, 43.366665, 61),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5707964, 0, 0), Vector3(0, 1.5707964, 0), Vector3(-0.46251225, 4.8781953, 0), Vector3(-0.45083034, 4.435452, 0), Vector3(-0.44505897, 4.2167153, 0), Vector3(-0.44505894, 4.003508, 0), Vector3(-0.44505894, 3.2253685, 0), Vector3(-0.8813913, 3.8868482, 0), Vector3(0.43982297, 3.207915, 0), Vector3(-1.5707964, 3.207915, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_scyg0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Camera3D3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-6, 24, -5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Camera3D3:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.5707964, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j3b7y"]
+_data = {
+&"Main_menu_turn": SubResource("Animation_556xv"),
+&"RESET": SubResource("Animation_scyg0")
+}
+
+[node name="Map2_JungleTemple" unique_id=1548937370 instance=ExtResource("1_6ngnx")]
+
+[node name="Camera3D3" type="Camera3D" parent="." index="0" unique_id=1905820441]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -6, 24, -5)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="1" unique_id=22528877]
+root_node = NodePath("../The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133")
+libraries/ = SubResource("AnimationLibrary_j3b7y")
+
+[node name="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" parent="." index="2" unique_id=569315563]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.817, -1.3793787, -6.845)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" index="0" unique_id=1010621907]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 2.5021634, 9.34888, -14.2829075)
+light_color = Color(0, 1, 0.58431375, 1)
+light_energy = 1.02
+light_indirect_energy = 0.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" index="1" unique_id=490242301]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.4991479, 9.34888, -14.2829075)
+light_color = Color(0, 1, 0.58431375, 1)
+light_energy = 1.02
+light_indirect_energy = 0.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" index="2" unique_id=870385631]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 12.02923, 8.119886, -9.68136)
+light_color = Color(0, 1, 0.58431375, 1)
+light_energy = 1.02
+light_indirect_energy = 0.0
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" index="3" unique_id=699399080]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 15.669477, 8.311295, -1.9817214)
+light_color = Color(0, 1, 0.58431375, 1)
+light_energy = 1.02
+light_indirect_energy = 0.0
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" index="4" unique_id=2109273353]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 15.6250725, 8.311295, 1.7681966)
+light_color = Color(0, 1, 0.58431375, 1)
+light_energy = 1.02
+light_indirect_energy = 0.0
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" index="5" unique_id=511081173]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 14.383886, 8.311295, 9.056528)
+light_color = Color(0, 1, 0.58431375, 1)
+light_energy = 1.02
+light_indirect_energy = 0.0
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" index="6" unique_id=745720261]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 7.847928, 8.311295, 13.654005)
+light_color = Color(0, 1, 0.58431375, 1)
+light_energy = 1.02
+light_indirect_energy = 0.0
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" index="7" unique_id=1787029368]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.91309834, 8.311295, 14.38991)
+light_color = Color(0, 1, 0.58431375, 1)
+light_energy = 1.02
+light_indirect_energy = 0.0
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" index="8" unique_id=1834803389]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -6.9224, 8.311295, 14.38991)
+light_color = Color(0, 1, 0.58431375, 1)
+light_energy = 1.02
+light_indirect_energy = 0.0
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" index="9" unique_id=1392885758]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -9.333153, 8.311295, 11.800405)
+light_color = Color(0, 1, 0.58431375, 1)
+light_energy = 1.02
+light_indirect_energy = 0.0
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" index="10" unique_id=862643765]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -11.850502, 8.311295, 10.037954)
+light_color = Color(0, 1, 0.58431375, 1)
+light_energy = 1.02
+light_indirect_energy = 0.0
+
+[node name="OmniLight3D12" type="OmniLight3D" parent="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" index="11" unique_id=2074379687]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -15.20553, 8.311295, 2.2464566)
+light_color = Color(0, 1, 0.58431375, 1)
+light_energy = 1.02
+light_indirect_energy = 0.0
+
+[node name="OmniLight3D13" type="OmniLight3D" parent="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" index="12" unique_id=1428540506]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -15.20553, 8.311295, -2.999516)
+light_color = Color(0, 1, 0.58431375, 1)
+light_energy = 1.02
+light_indirect_energy = 0.0
+
+[node name="OmniLight3D14" type="OmniLight3D" parent="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" index="13" unique_id=545352156]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -12.550673, 8.10716, -8.815224)
+light_color = Color(0, 1, 0.58431375, 1)
+light_energy = 1.02
+light_indirect_energy = 0.0
+
+[node name="OmniLight3D15" type="OmniLight3D" parent="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" index="14" unique_id=1150077004]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -6.9129004, 8.10716, -13.064529)
+light_color = Color(0, 1, 0.58431375, 1)
+light_energy = 1.02
+light_indirect_energy = 0.0
+
+[node name="Boardlight" type="SpotLight3D" parent="The_Jungle_Temple_by_awwwd__114_-57_93_to_156_319_133" index="15" unique_id=765471092]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.06448269, 10.344795, 0.5922549)
+light_color = Color(0.9109561, 0.8503563, 0.66019803, 1)
+light_energy = 11.692
+light_volumetric_fog_energy = 0.0
+light_specular = 0.0
+spot_range = 30.814854
+spot_angle = 78.56
+
+[node name="plateau_gen" parent="." index="3" unique_id=306472077 instance=ExtResource("2_gmstj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5137033, 1.1341133, -6.4904428)
+
+[node name="Cases" type="Node3D" parent="." index="4" unique_id=243240508]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0402257, 1.1492825, -8.052656)
+script = ExtResource("3_x7dkp")
+
+[node name="Case00" type="Marker3D" parent="Cases" index="0" unique_id=2017824664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.69775975, 0, 6.3402114)
+
+[node name="Case01" type="Marker3D" parent="Cases" index="1" unique_id=1531554438]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.755646, 0, 6.340167)
+
+[node name="Case02" type="Marker3D" parent="Cases" index="2" unique_id=1716411496]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8139632, 0, 6.340262)
+
+[node name="Case03" type="Marker3D" parent="Cases" index="3" unique_id=1223267019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8722196, 0, 6.340205)
+
+[node name="Case04" type="Marker3D" parent="Cases" index="4" unique_id=911679657]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9300227, 0, 6.3402033)
+
+[node name="Case05" type="Marker3D" parent="Cases" index="5" unique_id=1860825551]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.988516, 0, 6.340185)
+
+[node name="Case06" type="Marker3D" parent="Cases" index="6" unique_id=1347634491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0466404, 0, 6.3407226)
+
+[node name="Case07" type="Marker3D" parent="Cases" index="7" unique_id=1839686084]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.10459, 0, 6.340433)
+
+[node name="Case08" type="Marker3D" parent="Cases" index="8" unique_id=1328946891]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.162522, 0, 6.340556)
+
+[node name="Case09" type="Marker3D" parent="Cases" index="9" unique_id=871161043]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.221112, 0, 6.340319)
+
+[node name="Case10" type="Marker3D" parent="Cases" index="10" unique_id=1400189061]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.253641, 0, 6.3391676)
+
+[node name="Case11" type="Marker3D" parent="Cases" index="11" unique_id=1233353876]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.254449, 0, 5.2826667)
+
+[node name="Case12" type="Marker3D" parent="Cases" index="12" unique_id=1260448003]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.254167, 0, 4.2242846)
+
+[node name="Case13" type="Marker3D" parent="Cases" index="13" unique_id=451588804]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.254311, 0, 3.1660705)
+
+[node name="Case14" type="Marker3D" parent="Cases" index="14" unique_id=955206981]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.253862, 0, 2.1081119)
+
+[node name="Case15" type="Marker3D" parent="Cases" index="15" unique_id=991787213]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.253895, 0, 1.0498576)
+
+[node name="Case16" type="Marker3D" parent="Cases" index="16" unique_id=1335938936]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.254008, 0, -0.008096218)
+
+[node name="Case17" type="Marker3D" parent="Cases" index="17" unique_id=426053419]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.25426, 0, -1.0666876)
+
+[node name="Case18" type="Marker3D" parent="Cases" index="18" unique_id=979779279]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.253828, 0, -2.1242857)
+
+[node name="Case19" type="Marker3D" parent="Cases" index="19" unique_id=2145488677]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -10.253953, 0, -3.1828709)
+
+[node name="Case20" type="Marker3D" parent="Cases" index="20" unique_id=264296371]
+transform = Transform3D(-0.99999994, 0, 8.742277e-08, 0, 1, 0, -8.742277e-08, 0, -0.99999994, -10.253462, 0, -3.2160769)
+
+[node name="Case21" type="Marker3D" parent="Cases" index="21" unique_id=3762450]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -9.195764, 0, -3.2160683)
+
+[node name="Case22" type="Marker3D" parent="Cases" index="22" unique_id=209989036]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.137851, 0, -3.2161846)
+
+[node name="Case23" type="Marker3D" parent="Cases" index="23" unique_id=808994367]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -7.07964, 0, -3.2158976)
+
+[node name="Case24" type="Marker3D" parent="Cases" index="24" unique_id=433538975]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -6.021055, 0, -3.216116)
+
+[node name="Case25" type="Marker3D" parent="Cases" index="25" unique_id=1202145222]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -4.9631014, 0, -3.2158651)
+
+[node name="Case26" type="Marker3D" parent="Cases" index="26" unique_id=1749737142]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -3.9054537, 0, -3.215786)
+
+[node name="Case27" type="Marker3D" parent="Cases" index="27" unique_id=844414090]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.8472223, 0, -3.215828)
+
+[node name="Case28" type="Marker3D" parent="Cases" index="28" unique_id=1638066977]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.7911396, 0, -3.2186728)
+
+[node name="Case29" type="Marker3D" parent="Cases" index="29" unique_id=1593758452]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -0.7304405, 0, -3.2160301)
+
+[node name="Case30" type="Marker3D" parent="Cases" index="30" unique_id=21466637]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.69726896, 0, -3.216504)
+
+[node name="Case31" type="Marker3D" parent="Cases" index="31" unique_id=768533574]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.69786084, 0, -2.158041)
+
+[node name="Case32" type="Marker3D" parent="Cases" index="32" unique_id=214780433]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.6973673, 0, -1.099783)
+
+[node name="Case33" type="Marker3D" parent="Cases" index="33" unique_id=524895547]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.69771135, 0, -0.041297913)
+
+[node name="Case34" type="Marker3D" parent="Cases" index="34" unique_id=619382055]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.6976627, 0, 1.0164456)
+
+[node name="Case35" type="Marker3D" parent="Cases" index="35" unique_id=703930899]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.6976422, 0, 2.0746946)
+
+[node name="Case36" type="Marker3D" parent="Cases" index="36" unique_id=1172504002]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.69770575, 0, 3.1332793)
+
+[node name="Case37" type="Marker3D" parent="Cases" index="37" unique_id=740185009]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.69724834, 0, 4.191313)
+
+[node name="Case38" type="Marker3D" parent="Cases" index="38" unique_id=1483854337]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.69757676, 0, 5.249208)
+
+[node name="Case39" type="Marker3D" parent="Cases" index="39" unique_id=621680344]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.69788337, 0, 6.307112)

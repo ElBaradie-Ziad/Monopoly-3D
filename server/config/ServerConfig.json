@@ -1,0 +1,6 @@
+{
+  "port": 10000,
+  "maxClients": 100,
+  "timeoutSeconds": 30,
+  "debug": false
+}

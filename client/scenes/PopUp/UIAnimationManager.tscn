@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://u8gh4vl00y87"]
+
+[ext_resource type="Script" uid="uid://i8xjkelqidk2" path="res://scenes/PopUp/ui_animation_manager.gd" id="1_b8s0n"]
+
+[node name="UiAnimationManager" type="Node" unique_id=433930783]
+script = ExtResource("1_b8s0n")

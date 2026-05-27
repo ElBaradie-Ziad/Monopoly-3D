@@ -1,0 +1,39 @@
+[gd_resource type="Theme" format=3 uid="uid://bayyv3mdeb7uh"]
+
+[ext_resource type="Texture2D" uid="uid://cdjkhjak52m2a" path="res://ressource/panel-border-026.png" id="1_vomrs"]
+[ext_resource type="FontFile" uid="uid://mfwhpwxq8htj" path="res://ressource/fonts/Minecraft 2.ttf" id="2_hm0n7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t6ltk"]
+texture = ExtResource("1_vomrs")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+modulate_color = Color(1, 0.84313726, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vjhgu"]
+texture = ExtResource("1_vomrs")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8hvo4"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 20.0
+texture = ExtResource("1_vomrs")
+texture_margin_left = 24.0
+texture_margin_top = 24.0
+texture_margin_right = 24.0
+texture_margin_bottom = 24.0
+modulate_color = Color(1, 0.84313726, 0, 1)
+
+[resource]
+Button/styles/hover = SubResource("StyleBoxTexture_t6ltk")
+Button/styles/normal = SubResource("StyleBoxTexture_vjhgu")
+Button/styles/pressed = null
+Label/font_sizes/font_size = 28
+Label/fonts/font = ExtResource("2_hm0n7")
+Panel/styles/panel = SubResource("StyleBoxTexture_8hvo4")

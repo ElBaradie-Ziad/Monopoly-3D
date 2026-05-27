@@ -1,0 +1,860 @@
+[gd_scene format=3 uid="uid://bwu7s2k6wgdmt"]
+
+[ext_resource type="Theme" uid="uid://bayyv3mdeb7uh" path="res://FantasyMonopolyTheme.tres" id="1_2u6q4"]
+[ext_resource type="Texture2D" uid="uid://cdbflx0bw4xrc" path="res://ressource/logo/test_avatar.png" id="2_74h0g"]
+[ext_resource type="Texture2D" uid="uid://bllw25g5mfjss" path="res://design_raw/ui_ux/menu/leave_button (1).png" id="3_6cqqc"]
+[ext_resource type="Texture2D" uid="uid://cmlvkar6j283l" path="res://design_raw/ui_ux/menu/information_button (1).png" id="4_qfqqa"]
+[ext_resource type="Texture2D" uid="uid://qifj4mqc4wpx" path="res://design_raw/ui_ux/menu/settings_button (1).png" id="5_yhlje"]
+[ext_resource type="Texture2D" uid="uid://dbk8hoxrdeufp" path="res://design_raw/ui_ux/PopUp/HUD/frame_players_adaptable.png" id="6_yhlje"]
+[ext_resource type="Texture2D" uid="uid://co7cc3fig2e4w" path="res://design_raw/ui_ux/menu/create_lobby/border_background.png" id="9_6cqqc"]
+[ext_resource type="Script" uid="uid://d058hmfnhqyo" path="res://money_start.gd" id="9_7dkb5"]
+[ext_resource type="Texture2D" uid="uid://dhk1p7njtrs07" path="res://design_raw/ui_ux/PopUp/HUD/roll_dice_button.png" id="10_qfqqa"]
+[ext_resource type="FontFile" uid="uid://wcg3fbs7mqr0" path="res://design_raw/font/MinecraftBold.otf" id="11_4b3jo"]
+[ext_resource type="Texture2D" uid="uid://6xwowtuivslu" path="res://design_raw/ui_ux/menu/cameraButton.png" id="11_e20ic"]
+[ext_resource type="Script" uid="uid://c07qyln7ossg6" path="res://scripts/Buttons/controlbutton_animation.gd" id="12_7dkb5"]
+[ext_resource type="Texture2D" uid="uid://d02ltbnu4nwpp" path="res://design_raw/ui_ux/PopUp/HUD/endtime_button.png" id="12_qfqqa"]
+[ext_resource type="Script" uid="uid://dold03lo0iwod" path="res://leave_game.gd" id="12_wxyp2"]
+[ext_resource type="FontFile" uid="uid://mfwhpwxq8htj" path="res://ressource/fonts/Minecraft 2.ttf" id="13_wmuuj"]
+[ext_resource type="Texture2D" uid="uid://ckoauxjwqadmg" path="res://design_raw/ui_ux/menu/create_lobby/fond quitter.png" id="14_qfqqa"]
+[ext_resource type="PackedScene" uid="uid://ccmsiftcldpgc" path="res://scenes/Menu/Settings.tscn" id="15_7dkb5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2u6q4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qfqqa"]
+texture = ExtResource("9_6cqqc")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qfqqa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j6dun"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wxyp2"]
+texture = ExtResource("14_qfqqa")
+
+[node name="Control2" type="Control" unique_id=678458745]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_2u6q4")
+
+[node name="TopBar" type="Control" parent="." unique_id=455492709]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 100.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TopBar" unique_id=1674968818]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 96.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="3Buttons" type="HBoxContainer" parent="TopBar/MarginContainer" unique_id=2052398020]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 24
+alignment = 2
+
+[node name="ExitControl" type="Control" parent="TopBar/MarginContainer/3Buttons" unique_id=1334976793]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("12_7dkb5")
+
+[node name="ColorRect" type="ColorRect" parent="TopBar/MarginContainer/3Buttons/ExitControl" unique_id=1516543136]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Exit" type="TextureButton" parent="TopBar/MarginContainer/3Buttons/ExitControl" unique_id=20458933]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("3_6cqqc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="InfoControl" type="Control" parent="TopBar/MarginContainer/3Buttons" unique_id=1595435057]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("12_7dkb5")
+
+[node name="ColorRect" type="ColorRect" parent="TopBar/MarginContainer/3Buttons/InfoControl" unique_id=1871543029]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Info" type="TextureButton" parent="TopBar/MarginContainer/3Buttons/InfoControl" unique_id=1636485945]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_qfqqa")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SettingsControl" type="Control" parent="TopBar/MarginContainer/3Buttons" unique_id=601349184]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("12_7dkb5")
+
+[node name="ColorRect" type="ColorRect" parent="TopBar/MarginContainer/3Buttons/SettingsControl" unique_id=877095916]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Settings" type="TextureButton" parent="TopBar/MarginContainer/3Buttons/SettingsControl" unique_id=1099076050]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_yhlje")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LeftPanel" type="Panel" parent="." unique_id=734306031]
+custom_minimum_size = Vector2(320, 1080)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 320.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2u6q4")
+
+[node name="Margin" type="MarginContainer" parent="LeftPanel" unique_id=474694310]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="PlayersContainer" type="VBoxContainer" parent="LeftPanel/Margin" unique_id=1742460444]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Player1" type="Control" parent="LeftPanel/Margin/PlayersContainer" unique_id=1070954704]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+
+[node name="JailBackground" type="TextureRect" parent="LeftPanel/Margin/PlayersContainer/Player1" unique_id=650494444]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch_mode = 1
+
+[node name="ColorBackground" type="ColorRect" parent="LeftPanel/Margin/PlayersContainer/Player1" unique_id=1081101309]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Frame" type="TextureRect" parent="LeftPanel/Margin/PlayersContainer/Player1" unique_id=2046668409]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 0
+offset_right = 272.0
+offset_bottom = 128.0
+texture = ExtResource("6_yhlje")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="LeftPanel/Margin/PlayersContainer/Player1" unique_id=1280976119]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ElementsPlayer" type="HBoxContainer" parent="LeftPanel/Margin/PlayersContainer/Player1/MarginContainer" unique_id=1247793721]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Avatar" type="TextureRect" parent="LeftPanel/Margin/PlayersContainer/Player1/MarginContainer/ElementsPlayer" unique_id=1186717819]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+texture = ExtResource("2_74h0g")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftPanel/Margin/PlayersContainer/Player1/MarginContainer/ElementsPlayer" unique_id=1296303680]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="P1_Name" type="Label" parent="LeftPanel/Margin/PlayersContainer/Player1/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=96027892]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Player 1"
+
+[node name="P1_Money" type="Label" parent="LeftPanel/Margin/PlayersContainer/Player1/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=690859571]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$1500"
+script = ExtResource("9_7dkb5")
+
+[node name="Player2" type="Control" parent="LeftPanel/Margin/PlayersContainer" unique_id=445923657]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+
+[node name="JailBackground" type="TextureRect" parent="LeftPanel/Margin/PlayersContainer/Player2" unique_id=410106869]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorBackground" type="ColorRect" parent="LeftPanel/Margin/PlayersContainer/Player2" unique_id=528876784]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Frame" type="TextureRect" parent="LeftPanel/Margin/PlayersContainer/Player2" unique_id=2040739971]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 0
+offset_right = 272.0
+offset_bottom = 128.0
+texture = ExtResource("6_yhlje")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="LeftPanel/Margin/PlayersContainer/Player2" unique_id=1149546489]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ElementsPlayer" type="HBoxContainer" parent="LeftPanel/Margin/PlayersContainer/Player2/MarginContainer" unique_id=779620839]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Avatar" type="TextureRect" parent="LeftPanel/Margin/PlayersContainer/Player2/MarginContainer/ElementsPlayer" unique_id=966337180]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+texture = ExtResource("2_74h0g")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftPanel/Margin/PlayersContainer/Player2/MarginContainer/ElementsPlayer" unique_id=157108651]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="P2_Name" type="Label" parent="LeftPanel/Margin/PlayersContainer/Player2/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=1905401119]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Player 1"
+
+[node name="P2_Money" type="Label" parent="LeftPanel/Margin/PlayersContainer/Player2/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=1685668391]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$1500"
+script = ExtResource("9_7dkb5")
+
+[node name="Player3" type="Control" parent="LeftPanel/Margin/PlayersContainer" unique_id=1305959368]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+
+[node name="JailBackground" type="TextureRect" parent="LeftPanel/Margin/PlayersContainer/Player3" unique_id=1728725080]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorBackground" type="ColorRect" parent="LeftPanel/Margin/PlayersContainer/Player3" unique_id=1684613092]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Frame" type="TextureRect" parent="LeftPanel/Margin/PlayersContainer/Player3" unique_id=1215042557]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 0
+offset_right = 272.0
+offset_bottom = 128.0
+texture = ExtResource("6_yhlje")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="LeftPanel/Margin/PlayersContainer/Player3" unique_id=330608850]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ElementsPlayer" type="HBoxContainer" parent="LeftPanel/Margin/PlayersContainer/Player3/MarginContainer" unique_id=431892823]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Avatar" type="TextureRect" parent="LeftPanel/Margin/PlayersContainer/Player3/MarginContainer/ElementsPlayer" unique_id=1853003632]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+texture = ExtResource("2_74h0g")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftPanel/Margin/PlayersContainer/Player3/MarginContainer/ElementsPlayer" unique_id=1352005383]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="P3_Name" type="Label" parent="LeftPanel/Margin/PlayersContainer/Player3/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=24726546]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Player 1"
+
+[node name="P3_Money" type="Label" parent="LeftPanel/Margin/PlayersContainer/Player3/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=1513105374]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$1500"
+script = ExtResource("9_7dkb5")
+
+[node name="Player4" type="Control" parent="LeftPanel/Margin/PlayersContainer" unique_id=1308948653]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+
+[node name="JailBackground" type="TextureRect" parent="LeftPanel/Margin/PlayersContainer/Player4" unique_id=786089046]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorBackground" type="ColorRect" parent="LeftPanel/Margin/PlayersContainer/Player4" unique_id=1813031091]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Frame" type="TextureRect" parent="LeftPanel/Margin/PlayersContainer/Player4" unique_id=397350359]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 0
+offset_right = 272.0
+offset_bottom = 128.0
+texture = ExtResource("6_yhlje")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="LeftPanel/Margin/PlayersContainer/Player4" unique_id=908148789]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ElementsPlayer" type="HBoxContainer" parent="LeftPanel/Margin/PlayersContainer/Player4/MarginContainer" unique_id=678996324]
+layout_mode = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Avatar" type="TextureRect" parent="LeftPanel/Margin/PlayersContainer/Player4/MarginContainer/ElementsPlayer" unique_id=1441685978]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+texture = ExtResource("2_74h0g")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftPanel/Margin/PlayersContainer/Player4/MarginContainer/ElementsPlayer" unique_id=2123426422]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="P4_Name" type="Label" parent="LeftPanel/Margin/PlayersContainer/Player4/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=1379438603]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Player 1"
+
+[node name="P4_Money" type="Label" parent="LeftPanel/Margin/PlayersContainer/Player4/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=1180107602]
+unique_name_in_owner = true
+layout_mode = 2
+text = "$1500"
+script = ExtResource("9_7dkb5")
+
+[node name="DroitPannel" type="Panel" parent="." unique_id=1226355765]
+custom_minimum_size = Vector2(355, 570)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -270.0
+offset_bottom = 270.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qfqqa")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DroitPannel" unique_id=898805359]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 28.0
+grow_horizontal = 2
+
+[node name="Control" type="Control" parent="DroitPannel/VBoxContainer" unique_id=1151391405]
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="DroitPannel/VBoxContainer" unique_id=594102217]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Historique action"
+horizontal_alignment = 1
+
+[node name="DroitPannelChild" type="Panel" parent="DroitPannel" unique_id=919161698]
+custom_minimum_size = Vector2(291, 432)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -152.5
+offset_top = -212.0
+offset_right = 155.5
+offset_bottom = 265.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_qfqqa")
+
+[node name="Historique Action" type="VBoxContainer" parent="DroitPannel/DroitPannelChild" unique_id=608736197]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="BottomPanel" type="Panel" parent="." unique_id=2680471]
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -220.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_j6dun")
+
+[node name="Marge" type="MarginContainer" parent="BottomPanel" unique_id=337416833]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -220.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_bottom = 32
+
+[node name="BoutonsBasEcran" type="HBoxContainer" parent="BottomPanel/Marge" unique_id=804813141]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="ROLLDICE" type="Control" parent="BottomPanel/Marge/BoutonsBasEcran" unique_id=2042562868]
+custom_minimum_size = Vector2(320, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("12_7dkb5")
+
+[node name="ColorRect" type="ColorRect" parent="BottomPanel/Marge/BoutonsBasEcran/ROLLDICE" unique_id=358000059]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 38.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="BoutonRollDice" type="TextureButton" parent="BottomPanel/Marge/BoutonsBasEcran/ROLLDICE" unique_id=1520899459]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("10_qfqqa")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextRolldice" type="Label" parent="BottomPanel/Marge/BoutonsBasEcran/ROLLDICE" unique_id=208047897]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = -14.5
+offset_right = 129.0
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_4b3jo")
+text = "LANCER LES DES"
+
+[node name="ENDTURN" type="Control" parent="BottomPanel/Marge/BoutonsBasEcran" unique_id=288153502]
+custom_minimum_size = Vector2(320, 120)
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("12_7dkb5")
+
+[node name="ColorRect" type="ColorRect" parent="BottomPanel/Marge/BoutonsBasEcran/ENDTURN" unique_id=1894629263]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="BoutonEndTurn" type="TextureButton" parent="BottomPanel/Marge/BoutonsBasEcran/ENDTURN" unique_id=945752802]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("12_qfqqa")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextRolldice" type="Label" parent="BottomPanel/Marge/BoutonsBasEcran/ENDTURN" unique_id=1197094052]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -14.5
+offset_right = 80.0
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("11_4b3jo")
+text = "FIN TOUR"
+
+[node name="MargeBasDroite" type="MarginContainer" parent="BottomPanel" unique_id=280883704]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -80.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="CameraControl" type="Control" parent="BottomPanel/MargeBasDroite" unique_id=1783695058]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+script = ExtResource("12_7dkb5")
+
+[node name="ColorRect" type="ColorRect" parent="BottomPanel/MargeBasDroite/CameraControl" unique_id=1190028548]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Camera" type="TextureButton" parent="BottomPanel/MargeBasDroite/CameraControl" unique_id=1857796979]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("11_e20ic")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text_change_turn" type="Label" parent="." unique_id=1913098287]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -75.0
+offset_right = 500.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Tour de AAAAAAAAA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="QuitterPannel" type="Panel" parent="." unique_id=1928757830]
+visible = false
+custom_minimum_size = Vector2(900, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -450.0
+offset_top = -141.0
+offset_right = 450.0
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wxyp2")
+script = ExtResource("12_wxyp2")
+
+[node name="ColorRect" type="ColorRect" parent="QuitterPannel" unique_id=740804196]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 18.0
+offset_right = -16.0
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="MarginContainer" type="MarginContainer" parent="QuitterPannel" unique_id=47002325]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 56
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 40
+
+[node name="Label" type="Label" parent="QuitterPannel/MarginContainer" unique_id=1169730145]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "VOULEZ VOUS VRAIMENT QUITTER LA PARTIE"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="QuitterPannel/MarginContainer" unique_id=632933126]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 100
+
+[node name="Quitter" type="Control" parent="QuitterPannel/MarginContainer/HBoxContainer" unique_id=1682042955]
+custom_minimum_size = Vector2(272, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+script = ExtResource("12_7dkb5")
+
+[node name="ColorRect" type="ColorRect" parent="QuitterPannel/MarginContainer/HBoxContainer/Quitter" unique_id=1294736929]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0, 0, 1)
+
+[node name="Quitter" type="TextureButton" parent="QuitterPannel/MarginContainer/HBoxContainer/Quitter" unique_id=157564510]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -48.0
+offset_right = 136.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture_normal = ExtResource("6_yhlje")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="QuitterPannel/MarginContainer/HBoxContainer/Quitter" unique_id=876993767]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -12.0
+offset_right = 46.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_wmuuj")
+theme_override_font_sizes/font_size = 24
+text = "QUITTER"
+
+[node name="Rester" type="Control" parent="QuitterPannel/MarginContainer/HBoxContainer" unique_id=1080008893]
+custom_minimum_size = Vector2(272, 96)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+script = ExtResource("12_7dkb5")
+
+[node name="ColorRect" type="ColorRect" parent="QuitterPannel/MarginContainer/HBoxContainer/Rester" unique_id=1701518047]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.6627451, 0, 1)
+
+[node name="Rester" type="TextureButton" parent="QuitterPannel/MarginContainer/HBoxContainer/Rester" unique_id=1027315966]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -48.0
+offset_right = 136.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+texture_normal = ExtResource("6_yhlje")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="QuitterPannel/MarginContainer/HBoxContainer/Rester" unique_id=1259919279]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -12.0
+offset_right = 46.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_wmuuj")
+theme_override_font_sizes/font_size = 24
+text = "RESTER"
+
+[node name="Settings" parent="." unique_id=1712903750 instance=ExtResource("15_7dkb5")]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[connection signal="pressed" from="TopBar/MarginContainer/3Buttons/ExitControl/Exit" to="TopBar/MarginContainer/3Buttons/ExitControl" method="_on_button_leave_pressed"]
+[connection signal="pressed" from="TopBar/MarginContainer/3Buttons/InfoControl/Info" to="TopBar/MarginContainer/3Buttons/ExitControl" method="_on_button_info"]
+[connection signal="pressed" from="TopBar/MarginContainer/3Buttons/SettingsControl/Settings" to="TopBar/MarginContainer/3Buttons/ExitControl" method="_on_button_settings"]
+[connection signal="pressed" from="BottomPanel/MargeBasDroite/CameraControl/Camera" to="TopBar/MarginContainer/3Buttons/ExitControl" method="_on_camera_pressed"]
+[connection signal="pressed" from="QuitterPannel/MarginContainer/HBoxContainer/Quitter/Quitter" to="TopBar/MarginContainer/3Buttons/ExitControl" method="_on_quitterbutton_pressed"]
+[connection signal="pressed" from="QuitterPannel/MarginContainer/HBoxContainer/Rester/Rester" to="QuitterPannel" method="_on_rester_pressed"]

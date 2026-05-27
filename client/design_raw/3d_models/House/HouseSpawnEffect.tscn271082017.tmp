@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://l5ajox0wpfw2"]
+
+[ext_resource type="Script" uid="uid://3e8ps8io7f08" path="res://design_raw/3d_models/House/house_spawn_effect.gd" id="1_udaxw"]
+[ext_resource type="ArrayMesh" uid="uid://bw0x6h3x8qg4d" path="res://design_raw/3d_models/House/house_basique.obj" id="2_g7fmt"]
+
+[node name="HouseSpawnEffect" type="Node3D" unique_id=1444975774]
+script = ExtResource("1_udaxw")
+bounce_height = null
+squash_strength = null
+duration = null
+final_scale = null
+
+[node name="HouseMesh" type="MeshInstance3D" parent="." unique_id=2041551637]
+transform = Transform3D(0.1, 0, 0, 0, 0.0051115835, 0.09986927, 0, -0.09986927, 0.0051115835, -2.4159322, 0.28396606, 1.8262582)
+mesh = ExtResource("2_g7fmt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=461337386]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1497432530]

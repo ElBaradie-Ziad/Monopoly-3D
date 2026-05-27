@@ -1,0 +1,1125 @@
+[gd_scene format=3 uid="uid://11y5av0brdb1"]
+
+[ext_resource type="Script" uid="uid://bkbx4qhonbvcu" path="res://scripts/PopUp/achat.gd" id="2_pbboa"]
+[ext_resource type="Texture2D" uid="uid://cq138xinkjmlr" path="res://design_raw/ui_ux/PopUp/Construction_Maison/fond achat.png" id="2_ychxe"]
+[ext_resource type="FontFile" uid="uid://bk0jn58jrpa0p" path="res://ressource/fonts/Minecraft 2.ttf" id="3_48iiv"]
+[ext_resource type="Texture2D" uid="uid://dk6grdk2tllfu" path="res://ressource/logo/renttable_popup.png" id="4_4g0al"]
+[ext_resource type="Script" uid="uid://c07qyln7ossg6" path="res://scripts/Buttons/controlbutton_animation.gd" id="5_83o0t"]
+[ext_resource type="Texture2D" uid="uid://dbk8hoxrdeufp" path="res://design_raw/ui_ux/PopUp/HUD/frame_players_adaptable.png" id="6_83o0t"]
+[ext_resource type="Texture2D" uid="uid://7gakf8rtfwu8" path="res://design_raw/textures_sources/output-onlinepngtools.png" id="6_pbboa"]
+[ext_resource type="Texture2D" uid="uid://kh814h2oo3s4" path="res://design_raw/textures_sources/output-onlinepngtools (1).png" id="7_48iiv"]
+[ext_resource type="Texture2D" uid="uid://b3xc1ri34a1rp" path="res://design_raw/textures_sources/output-onlinepngtools (3).png" id="8_b0xyq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_83o0t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4g0al"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yorna"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_342rs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_an7kn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ychxe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jl4b0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pq5cr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jgm05"]
+
+[node name="Pannel" type="Panel" unique_id=717188841]
+custom_minimum_size = Vector2(520, 450)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_83o0t")
+script = ExtResource("2_pbboa")
+
+[node name="Fond" type="ColorRect" parent="." unique_id=1651370261]
+visible = false
+custom_minimum_size = Vector2(520, 380)
+layout_mode = 0
+offset_right = 520.0
+offset_bottom = 445.0
+color = Color(0.011764706, 0.011764706, 0.011764706, 0.627451)
+
+[node name="Banderole_color" type="ColorRect" parent="." unique_id=86701763]
+visible = false
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+color = Color(1, 0, 0, 1)
+
+[node name="BuyPropertyPopup" type="Panel" parent="." unique_id=1980393509]
+visible = false
+custom_minimum_size = Vector2(520, 450)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4g0al")
+
+[node name="Frame" type="TextureRect" parent="BuyPropertyPopup" unique_id=1507046827]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ychxe")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="BuyPropertyPopup" unique_id=2003486648]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BuyPropertyPopup/MarginContainer" unique_id=1483175317]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Control" type="Control" parent="BuyPropertyPopup/MarginContainer/VBoxContainer" unique_id=1023004024]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="BuyPropertyPopup/MarginContainer/VBoxContainer" unique_id=1181739171]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Nom" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/Header" unique_id=612596154]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 32
+text = "BOULEVARD DE BELLEVILLE"
+horizontal_alignment = 1
+
+[node name="PriceBlock" type="HBoxContainer" parent="BuyPropertyPopup/MarginContainer/VBoxContainer" unique_id=1059381246]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="BuyPrice" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/PriceBlock" unique_id=236863768]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 24
+text = "PRIX : 60 M"
+horizontal_alignment = 1
+
+[node name="RentTable" type="Panel" parent="BuyPropertyPopup/MarginContainer/VBoxContainer" unique_id=206997645]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_yorna")
+
+[node name="Frame" type="TextureRect" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable" unique_id=477689600]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_4g0al")
+
+[node name="MarginContainer" type="MarginContainer" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable" unique_id=1374539927]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 25
+
+[node name="Hbox" type="HBoxContainer" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer" unique_id=917607719]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox" unique_id=1227939162]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 6
+columns = 2
+
+[node name="Label" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=500522291]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "Loyer de base"
+
+[node name="Price1" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=1344513197]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "10M"
+
+[node name="Label3" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=1945922108]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "1 Maison"
+
+[node name="Price2" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=189620752]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "10 M"
+
+[node name="Label5" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=375085829]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "2 Maisons"
+
+[node name="Price3" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=1570673675]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "10 M"
+
+[node name="Label7" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=1848744761]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "3 Maisons"
+
+[node name="Price4" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=676279631]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "10 M"
+
+[node name="Label9" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=626000365]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "4 Maisons "
+
+[node name="Price5" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=1124486072]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "10 M"
+
+[node name="Label11" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=1900258419]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "Hôtel"
+
+[node name="Price6" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=241528633]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "10 M"
+
+[node name="ButtonsRow" type="HBoxContainer" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox" unique_id=214867134]
+layout_mode = 2
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow" unique_id=1838710147]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 2
+
+[node name="AcheterControl" type="Control" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer" unique_id=573222969]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 2
+script = ExtResource("5_83o0t")
+
+[node name="ColorRect" type="ColorRect" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/AcheterControl" unique_id=1546891058]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Acheter" type="TextureButton" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/AcheterControl" unique_id=528694900]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_83o0t")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/AcheterControl" unique_id=1337057517]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.5
+offset_top = -11.5
+offset_right = 30.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 24
+text = "ACHETER"
+
+[node name="PasserControl" type="Control" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer" unique_id=1472686985]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 2
+script = ExtResource("5_83o0t")
+
+[node name="Button" type="TextureButton" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/PasserControl" unique_id=2121621210]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_83o0t")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/PasserControl" unique_id=1088258896]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 24
+text = "PASSER"
+
+[node name="ColorRect" type="ColorRect" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/PasserControl" unique_id=796351457]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="HouseHotelPrice" type="HBoxContainer" parent="BuyPropertyPopup/MarginContainer/VBoxContainer" unique_id=951594325]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="HousePrice" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/HouseHotelPrice" unique_id=1245693328]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_48iiv")
+text = "Maison : 50 M"
+
+[node name="HotelPrice" type="Label" parent="BuyPropertyPopup/MarginContainer/VBoxContainer/HouseHotelPrice" unique_id=1062339803]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_48iiv")
+text = "Hôtel : 50 M"
+
+[node name="BuyGarePopup" type="Panel" parent="." unique_id=86316808]
+visible = false
+custom_minimum_size = Vector2(520, 450)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_342rs")
+
+[node name="Frame" type="TextureRect" parent="BuyGarePopup" unique_id=133367413]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ychxe")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="BuyGarePopup" unique_id=1048144213]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="TextureRect" type="TextureRect" parent="BuyGarePopup/MarginContainer" unique_id=1254604880]
+layout_mode = 2
+texture = ExtResource("6_pbboa")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BuyGarePopup/MarginContainer" unique_id=960374284]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Control" type="Control" parent="BuyGarePopup/MarginContainer/VBoxContainer" unique_id=535761980]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="BuyGarePopup/MarginContainer/VBoxContainer" unique_id=631387497]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Nom" type="Label" parent="BuyGarePopup/MarginContainer/VBoxContainer/Header" unique_id=1675194691]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 32
+text = "GARE SAINT-LAZARE"
+horizontal_alignment = 1
+
+[node name="PriceBlock" type="HBoxContainer" parent="BuyGarePopup/MarginContainer/VBoxContainer" unique_id=2056202363]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="BuyPrice" type="Label" parent="BuyGarePopup/MarginContainer/VBoxContainer/PriceBlock" unique_id=1132561983]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 24
+text = "PRIX : 60 M"
+horizontal_alignment = 1
+
+[node name="RentTable" type="Panel" parent="BuyGarePopup/MarginContainer/VBoxContainer" unique_id=1435122029]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_an7kn")
+
+[node name="Frame" type="TextureRect" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable" unique_id=140804922]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_4g0al")
+
+[node name="MarginContainer" type="MarginContainer" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable" unique_id=2066603956]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 25
+
+[node name="Hbox" type="HBoxContainer" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer" unique_id=2066208495]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox" unique_id=1751668901]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 6
+columns = 2
+
+[node name="Label" type="Label" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=281206946]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "Loyer de base"
+
+[node name="Price1" type="Label" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=1651761223]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "10M"
+
+[node name="Label3" type="Label" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=1584617587]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "2 Gares"
+
+[node name="Price2" type="Label" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=1631092369]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "10 M"
+
+[node name="Label5" type="Label" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=2135731587]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "3 Gares"
+
+[node name="Price3" type="Label" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=1482901737]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "10 M"
+
+[node name="Label7" type="Label" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=1776671953]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "4 Gares"
+
+[node name="Price4" type="Label" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=1817770768]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "10 M"
+
+[node name="ButtonsRow" type="HBoxContainer" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox" unique_id=1490941199]
+layout_mode = 2
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow" unique_id=272249112]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="AcheterControl" type="Control" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer" unique_id=539644554]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 2
+script = ExtResource("5_83o0t")
+
+[node name="ColorRect" type="ColorRect" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/AcheterControl" unique_id=512445394]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Acheter" type="TextureButton" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/AcheterControl" unique_id=1570506869]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_83o0t")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/AcheterControl" unique_id=205609101]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -12.0
+offset_right = 46.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 24
+text = "ACHETER"
+
+[node name="PasserControl" type="Control" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer" unique_id=107296090]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 2
+script = ExtResource("5_83o0t")
+
+[node name="ColorRect" type="ColorRect" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/PasserControl" unique_id=1341175325]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Button" type="TextureButton" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/PasserControl" unique_id=1309488426]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_83o0t")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/PasserControl" unique_id=2118901707]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.5
+offset_top = -12.0
+offset_right = 40.5
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 24
+text = "PASSER"
+
+[node name="HouseHotelPrice" type="HBoxContainer" parent="BuyGarePopup/MarginContainer/VBoxContainer" unique_id=622523509]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="BuyCompagnieEauPopup" type="Panel" parent="." unique_id=1112858641]
+visible = false
+custom_minimum_size = Vector2(520, 450)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ychxe")
+
+[node name="Frame" type="TextureRect" parent="BuyCompagnieEauPopup" unique_id=244138254]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ychxe")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="BuyCompagnieEauPopup" unique_id=939789258]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="TextureRect" type="TextureRect" parent="BuyCompagnieEauPopup/MarginContainer" unique_id=2006496440]
+layout_mode = 2
+texture = ExtResource("7_48iiv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BuyCompagnieEauPopup/MarginContainer" unique_id=1573172861]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Control" type="Control" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer" unique_id=75255727]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer" unique_id=167708015]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Nom" type="Label" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/Header" unique_id=1231710002]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 30
+text = "COMPAGNIE DE DISTRIBUTION
+D'EAU"
+horizontal_alignment = 1
+
+[node name="PriceBlock" type="HBoxContainer" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer" unique_id=900769206]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="BuyPrice" type="Label" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/PriceBlock" unique_id=1589175693]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 24
+text = "PRIX : 150 M"
+horizontal_alignment = 1
+
+[node name="RentTable" type="Panel" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer" unique_id=1524285186]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jl4b0")
+
+[node name="Frame" type="TextureRect" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable" unique_id=1282038507]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_4g0al")
+
+[node name="MarginContainer" type="MarginContainer" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable" unique_id=1202080085]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 25
+
+[node name="Hbox" type="HBoxContainer" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer" unique_id=1636870154]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox" unique_id=673278737]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 6
+columns = 2
+
+[node name="Label" type="Label" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=443385245]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "1 service"
+
+[node name="Price1" type="Label" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=601790524]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "4 × dés"
+
+[node name="Label3" type="Label" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=2034949770]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "2 services"
+
+[node name="Price2" type="Label" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=652193377]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "10 × dés"
+
+[node name="ButtonsRow" type="HBoxContainer" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox" unique_id=1970761382]
+layout_mode = 2
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow" unique_id=31192779]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 2
+
+[node name="AcheterControl" type="Control" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer" unique_id=475321188]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 2
+script = ExtResource("5_83o0t")
+
+[node name="ColorRect" type="ColorRect" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/AcheterControl" unique_id=778550329]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Acheter" type="TextureButton" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/AcheterControl" unique_id=501714895]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_83o0t")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/AcheterControl" unique_id=1103313520]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.5
+offset_top = -11.5
+offset_right = 30.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 24
+text = "ACHETER"
+
+[node name="PasserControl" type="Control" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer" unique_id=780648810]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 2
+script = ExtResource("5_83o0t")
+
+[node name="ColorRect" type="ColorRect" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/PasserControl" unique_id=1604783420]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Button" type="TextureButton" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/PasserControl" unique_id=22411865]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_83o0t")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/PasserControl" unique_id=1052792949]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.5
+offset_top = -11.5
+offset_right = 30.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 24
+text = "PASSER"
+
+[node name="HouseHotelPrice" type="HBoxContainer" parent="BuyCompagnieEauPopup/MarginContainer/VBoxContainer" unique_id=1476884441]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="BuyCompagnieElecPopup" type="Panel" parent="." unique_id=1936976957]
+visible = false
+custom_minimum_size = Vector2(520, 450)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_pq5cr")
+
+[node name="Frame" type="TextureRect" parent="BuyCompagnieElecPopup" unique_id=953873601]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ychxe")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="BuyCompagnieElecPopup" unique_id=819184394]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="TextureRect" type="TextureRect" parent="BuyCompagnieElecPopup/MarginContainer" unique_id=1763942143]
+layout_mode = 2
+texture = ExtResource("8_b0xyq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BuyCompagnieElecPopup/MarginContainer" unique_id=197473148]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Control" type="Control" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer" unique_id=1051436133]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer" unique_id=923250505]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Nom" type="Label" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/Header" unique_id=1617752378]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 30
+text = "COMPAGNIE DE DISTRIBUTION
+ DE L'ÉLECTRICITÉ"
+horizontal_alignment = 1
+
+[node name="PriceBlock" type="HBoxContainer" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer" unique_id=2038116054]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="BuyPrice" type="Label" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/PriceBlock" unique_id=699546873]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 24
+text = "PRIX : 150 M"
+horizontal_alignment = 1
+
+[node name="RentTable" type="Panel" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer" unique_id=2032358070]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jgm05")
+
+[node name="Frame" type="TextureRect" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable" unique_id=1966036114]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_4g0al")
+
+[node name="MarginContainer" type="MarginContainer" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable" unique_id=1394355778]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 25
+
+[node name="Hbox" type="HBoxContainer" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer" unique_id=1485053023]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox" unique_id=1179468034]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 6
+columns = 2
+
+[node name="Label" type="Label" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=568305368]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "1 service"
+
+[node name="Price1" type="Label" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=1931119568]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "4 × dés"
+
+[node name="Label3" type="Label" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=1222392810]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "2 services"
+
+[node name="Price2" type="Label" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/GridContainer" unique_id=493572229]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 17
+text = "10 × dés"
+
+[node name="ButtonsRow" type="HBoxContainer" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox" unique_id=1697558315]
+layout_mode = 2
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow" unique_id=2131202874]
+layout_mode = 2
+alignment = 2
+
+[node name="AcheterControl" type="Control" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer" unique_id=475508506]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 2
+script = ExtResource("5_83o0t")
+
+[node name="ColorRect" type="ColorRect" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/AcheterControl" unique_id=1485788155]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Acheter" type="TextureButton" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/AcheterControl" unique_id=1044729897]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_83o0t")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/AcheterControl" unique_id=892177977]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -12.0
+offset_right = 46.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 24
+text = "ACHETER"
+
+[node name="PasserControl" type="Control" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer" unique_id=692467589]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 2
+script = ExtResource("5_83o0t")
+
+[node name="ColorRect" type="ColorRect" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/PasserControl" unique_id=1631593710]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Button" type="TextureButton" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/PasserControl" unique_id=490566896]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_83o0t")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/PasserControl" unique_id=549927925]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.5
+offset_top = -12.0
+offset_right = 40.5
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_48iiv")
+theme_override_font_sizes/font_size = 24
+text = "PASSER"
+
+[node name="HouseHotelPrice" type="HBoxContainer" parent="BuyCompagnieElecPopup/MarginContainer/VBoxContainer" unique_id=1913999261]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[connection signal="pressed" from="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/AcheterControl/Acheter" to="." method="_on_btn_acheter_pressed"]
+[connection signal="pressed" from="BuyPropertyPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/PasserControl/Button" to="." method="_on_btn_deny_pressed"]
+[connection signal="pressed" from="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/AcheterControl/Acheter" to="." method="_on_btn_acheter_pressed"]
+[connection signal="pressed" from="BuyGarePopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/PasserControl/Button" to="." method="_on_btn_deny_pressed"]
+[connection signal="pressed" from="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/AcheterControl/Acheter" to="." method="_on_btn_acheter_pressed"]
+[connection signal="pressed" from="BuyCompagnieEauPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/PasserControl/Button" to="." method="_on_btn_deny_pressed"]
+[connection signal="pressed" from="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/AcheterControl/Acheter" to="." method="_on_btn_acheter_pressed"]
+[connection signal="pressed" from="BuyCompagnieElecPopup/MarginContainer/VBoxContainer/RentTable/MarginContainer/Hbox/ButtonsRow/VBoxContainer/PasserControl/Button" to="." method="_on_btn_deny_pressed"]

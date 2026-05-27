@@ -1,0 +1,227 @@
+[gd_scene format=3 uid="uid://ckcfvsqxwo5gg"]
+
+[ext_resource type="Texture2D" uid="uid://co7cc3fig2e4w" path="res://design_raw/ui_ux/menu/create_lobby/border_background.png" id="1_unnkp"]
+[ext_resource type="FontFile" uid="uid://mfwhpwxq8htj" path="res://ressource/fonts/Minecraft 2.ttf" id="2_unnkp"]
+[ext_resource type="Script" uid="uid://c07qyln7ossg6" path="res://scripts/Buttons/controlbutton_animation.gd" id="3_unnkp"]
+[ext_resource type="Texture2D" uid="uid://mb8anckjr8ip" path="res://design_raw/ui_ux/menu/btn_press.png" id="4_4mue6"]
+
+[node name="ActionsPrison" type="Control" unique_id=824236961]
+custom_minimum_size = Vector2(520, 450)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -225.0
+offset_right = 260.0
+offset_bottom = 225.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1122442538]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.54901963)
+
+[node name="Frame" type="TextureRect" parent="." unique_id=2102438057]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_unnkp")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1189779330]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1379285964]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 12
+
+[node name="Header" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1981431004]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Nom" type="Label" parent="MarginContainer/VBoxContainer/Header" unique_id=11287372]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_unnkp")
+theme_override_font_sizes/font_size = 22
+text = "VOUS ÊTES EN PRISON"
+horizontal_alignment = 1
+
+[node name="PriceBlock" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1094476078]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="BuyPrice" type="Label" parent="MarginContainer/VBoxContainer/PriceBlock" unique_id=1987831057]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("2_unnkp")
+theme_override_font_sizes/font_size = 24
+text = "Vous avez plusieurs choix possible :"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1682746737]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 12
+
+[node name="rolldice" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1965367653]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+script = ExtResource("3_unnkp")
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/VBoxContainer/rolldice" unique_id=2110727018]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainer/rolldice" unique_id=2072057550]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_4mue6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/rolldice" unique_id=1676849709]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_unnkp")
+theme_override_font_sizes/font_size = 24
+text = "Lancer les des"
+
+[node name="pay" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=402112623]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+script = ExtResource("3_unnkp")
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/VBoxContainer/pay" unique_id=560270494]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainer/pay" unique_id=1063397214]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_4mue6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/pay" unique_id=667730685]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_unnkp")
+theme_override_font_sizes/font_size = 24
+text = "Payer 50€"
+
+[node name="card" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1845312536]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+script = ExtResource("3_unnkp")
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/VBoxContainer/card" unique_id=1765966886]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainer/card" unique_id=1578489212]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_4mue6")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/card" unique_id=1629371844]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_unnkp")
+theme_override_font_sizes/font_size = 24
+text = "Utiliser carte prison"
+
+[node name="turns" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1953718342]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_unnkp")
+theme_override_font_sizes/font_size = 16
+text = "Tours restants : 2"
+horizontal_alignment = 1

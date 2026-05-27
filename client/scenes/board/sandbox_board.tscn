@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://2d8vo7ppnuds"]
+
+[ext_resource type="Script" uid="uid://cj8th0lkx3hsa" path="res://scripts/board/sandbox_board.gd" id="1_wvp6g"]
+[ext_resource type="Script" uid="uid://djiysemvgfqm1" path="res://scripts/board/camera_controller.gd" id="2_abhwx"]
+[ext_resource type="Script" uid="uid://b08ad53b4elgo" path="res://scripts/board/building_manager.gd" id="3_wavt0"]
+[ext_resource type="ArrayMesh" uid="uid://fy0ab561x63y" path="res://design_raw/textures_sources/jail_v1.obj" id="4_043x4"]
+[ext_resource type="Texture2D" uid="uid://bpsk2c7s8jgqq" path="res://design_raw/textures_sources/15317860-image_xl.webp" id="5_1f7a2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vcxw5"]
+albedo_texture = ExtResource("5_1f7a2")
+
+[node name="SandboxBoard2" type="Node3D" unique_id=1237468327]
+script = ExtResource("1_wvp6g")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=642415676]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 35, 0)
+script = ExtResource("2_abhwx")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1773741831]
+transform = Transform3D(0.8660254, 0.35355338, -0.35355338, 0, 0.70710677, 0.70710677, 0.5, -0.6123724, 0.6123724, 0, 0, 0)
+
+[node name="BuildingManager" type="Node3D" parent="." unique_id=1294663918]
+script = ExtResource("3_wavt0")
+
+[node name="JailV1" type="MeshInstance3D" parent="." unique_id=178858725]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.607425, 0, -19.361431)
+visible = false
+mesh = ExtResource("4_043x4")
+surface_material_override/0 = SubResource("StandardMaterial3D_vcxw5")

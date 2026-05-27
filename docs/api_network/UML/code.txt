@@ -1,0 +1,280 @@
+@startuml
+
+skinparam linetype ortho
+skinparam packageStyle rectangle
+
+' ==========================================
+' CLIENT
+' ==========================================
+package "Client" {
+  class NetworkClient {
+    + connect()
+    + sendPacket(p : JSON)
+  }
+}
+
+' ==========================================
+' SERVER
+' ==========================================
+package "Server" {
+
+  class Main {
+    + main() : void
+  }
+
+  ' --- ThreadSafeQueue ---
+  class ThreadSafeQueue <<Singleton>> {
+    - queue : std::queue<Message>
+    - mutex : std::mutex
+    - cv : std::condition_variable
+    + push(msg : Message) : void
+    + pop() : Message
+  }
+
+  ' --- Couche Réseau ---
+  package "Network Layer (Producer)" {
+    class NetworkServer {
+      - port : int
+      - queueRef : ThreadSafeQueue&
+      + listen() : void
+      + handleNewConnection(socket : TCPSocket) : void
+      + update(data : JSON, recipients : List<int>)
+    }
+
+    class SessionManager {
+      - sessions : Map<int, Session>
+      + getOrCreateSession(socket : TCPSocket) : Session
+      + removeSession(clientID : int)
+      + broadcast(data : JSON, recipients : List<int>)
+    }
+
+    class Session {
+      - socket : TCPSocket
+      - clientID : int
+      + start(queue : ThreadSafeQueue&) : void
+      + handleRead(rawData : string, queue : ThreadSafeQueue&) : void
+      + send(data : JSON) : void
+    }
+    
+    NetworkServer --> SessionManager : "Use\ngetOrCreateSession()\nbroadcast()"
+    SessionManager --> Session : "Manage\nCreate or Replace"
+  }
+
+  ' --- Couche Protocole ---
+  package "Protocol Layer" {
+    class MessageParser {
+      + {static} parse(rawData : string) : Message
+    }
+
+    class MessageValidator {
+      + {static} validate(msg : Message) : bool
+    }
+
+    class ResponseBuilder {
+      + {static} buildResponse(mainID : int, subID : int, erreur : bool, data : JSON) : JSON
+      + {static} buildSnapshot(mainID : int, subID : int, erreur : bool, data : JSON) : JSON
+      + {static} buildEvent(mainID : int, subID : int, erreur : bool, data : JSON) : JSON
+    }
+
+    class Message {
+      + mainID : int
+      + subId : int
+      + clientID : int
+      + data : JSON
+    }
+
+    MessageParser ..> Message : "Create"
+  }
+
+  ' --- Couche Logique ---
+  package "Logic Layer (Consumer)" {
+    
+    class LogicDispatcher {
+      + queue : ThreadSafeQueue
+      + networkObserver : IObserver
+      + game : GameController
+      + lobby : LobbyController
+      + auth : AuthController
+    
+      + run() : void 
+      - dispatch(msg : Message) : void
+    }
+
+    interface IObserver {
+      + update(data : JSON, recipients : List<int>)
+    }
+
+    interface IController {
+      + observer : IObserver
+      + handle(msg : Message) : void
+    }
+
+    class AuthController {
+      + handle(msg : Message) : void
+      - queryDB()
+    }
+
+    class LobbyController {
+      + handle(msg : Message) : void
+      + createMatch()
+      + joinMatch()
+      + startMatch()
+    }
+
+    class GameController {
+      + handle(msg : Message) : void
+      + executeCommand(cmd : ICommand*, match : Match&) : void
+    }
+    
+    IController <|.. AuthController
+    IController <|.. LobbyController
+    IController <|.. GameController
+
+    class MatchManager <<Singleton>> {
+      - instance : MatchManager
+      - matches : Map<int, Match>
+      + {static} getInstance() : MatchManager*
+      + createMatch() : int
+      + getMatch(matchId : int) : Match*
+      + removeMatch(matchId : int) : void
+    }
+
+    interface ICommand {
+      + execute(match : Match&) : void
+    }
+
+    package "Commands (Example)" {
+      class CmdRollDice {
+        + execute(match : Match&) : void
+      }
+      class CmdEndTurn {
+        + execute(match : Match&) : void
+      }
+    }
+    CmdRollDice ..|> ICommand
+    CmdEndTurn ..|> ICommand
+
+    class Match {
+      + id : int
+      - stateRules : IMatchState*
+      - stateData : GameState
+      - observers : List<IObserver*>
+      
+      + joinMatch(clientID : int) : bool
+      + addObserver(obs : IObserver*) : void
+      + notifyObservers() : void
+      + setState(newState : IMatchState*) : void
+      + getGameState() : GameState&
+    }
+
+    interface IMatchState {
+      + canExecute(cmd : ICommand*) : bool
+    }
+
+    class StateFinished
+    class StateWaiting
+    class StatePlaying
+
+    StateFinished ..|> IMatchState
+    StateWaiting ..|> IMatchState
+    StatePlaying ..|> IMatchState
+
+    ' --- GAME MODELS ---
+    package "Game Models (Data)" {
+      class GameState {
+        + currentPlayerID : int
+        + players : List<Player>
+        + board : List<Property>
+        
+        + addPlayer(id : int) : void
+        + getPlayer(id : int) : Player&
+        + getProperty(index : int) : Property&
+        + getPlayerCount() : int
+        + nextTurn() : void
+        + toJSON() : JSON
+      }
+
+      class Player {
+        + id : int
+        + playerName : string
+        + token : string
+        + playerClass : string
+        + money : int
+        + position : int
+        + inJail : bool
+        + jailTurns : int
+        + numberDoubles : int
+        + isEliminated : bool
+        + properties : List<int>
+        + card : List<int>
+        
+        + move(cases : int) : void
+        + addMoney(amount : int) : void
+        + removeMoney(amount : int) : void
+        + toJSON() : JSON
+      }
+
+      class Property {
+        + index : int
+        + ownerId : int
+        + houseCount : int
+        + hasHotel : bool
+        
+        + setOwner(id : int) : void
+        + getCurrentRent() : int
+        + addHouse() : void
+        + toJSON() : JSON
+      }
+
+      GameState *-- Player : "Contains"
+      GameState *-- Property : "Board"
+    }
+  }
+}
+
+' ==========================================
+' DATA
+' ==========================================
+package "Data" {
+  class DatabaseManager <<Singleton>> {
+    + {static} connection()
+  }
+}
+
+' ==========================================
+' RELATIONS GLOBALES
+' ==========================================
+
+' 1. Entry & Network
+NetworkClient --> NetworkServer : "TCP"
+Main --> NetworkServer : "Thread1"
+Main --> LogicDispatcher : "Thread2"
+Main --> ThreadSafeQueue : "Instances"
+
+' 2. Producer / Consumer Flow
+Session --> ThreadSafeQueue : "push(Message)"
+LogicDispatcher --> ThreadSafeQueue : "pop() Message"
+
+' 3. Parsing
+Session ..> MessageParser : "Parse"
+
+' 4. Dispatching
+LogicDispatcher --> IController : "handle(Message, Observer)"
+
+' 5. Controllers logic
+LobbyController --> MatchManager : "Manage Lobby"
+GameController --> MatchManager : "Find the match"
+GameController ..> ICommand : "Create an action"
+AuthController --> DatabaseManager : "Check Login"
+
+' 6. Match Logic
+ICommand ..> Match : "Modify status"
+Match *-- GameState : "Data"
+Match o-- IMatchState : "Rules"
+
+' 7. Observer & Protocol
+Match --> IObserver : "Notifies"
+NetworkServer ..|> IObserver : "Implement"
+GameState ..> ResponseBuilder : "DataToJSON"
+
+@enduml

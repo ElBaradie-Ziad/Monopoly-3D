@@ -1,0 +1,1390 @@
+[gd_scene format=3 uid="uid://gcn1h5d0xd4d"]
+
+[ext_resource type="Texture2D" uid="uid://co7cc3fig2e4w" path="res://design_raw/ui_ux/menu/create_lobby/border_background.png" id="1_4t01k"]
+[ext_resource type="FontFile" uid="uid://mfwhpwxq8htj" path="res://ressource/fonts/Minecraft 2.ttf" id="2_7sexd"]
+[ext_resource type="FontFile" uid="uid://qmpo1m57xo05" path="res://design_raw/font/minecraft-bold-basic.otf" id="3_qw1rm"]
+[ext_resource type="StyleBox" uid="uid://i3wv8ffd343" path="res://design_raw/ui_ux/styleBoxTexture/btn_normal/btn_normal.tres" id="4_tvtuk"]
+[ext_resource type="StyleBox" uid="uid://djx64k2pflpki" path="res://design_raw/ui_ux/styleBoxTexture/btn_normal/btn_press.tres" id="5_2cwk0"]
+[ext_resource type="StyleBox" uid="uid://8r0loxx2io3" path="res://design_raw/ui_ux/styleBoxTexture/btn_normal/btn_hover.tres" id="6_apfnb"]
+[ext_resource type="Texture2D" uid="uid://b28voft8gcjyk" path="res://assets/models/board/Map1.png" id="6_qmtm5"]
+[ext_resource type="Texture2D" uid="uid://d1b44xn5sik47" path="res://design_raw/ui_ux/login_screen/btn.png" id="7_4t01k"]
+[ext_resource type="Script" uid="uid://cych2entrt6da" path="res://scripts/Buttons/scroll_guide.gd" id="7_tvtuk"]
+[ext_resource type="Texture2D" uid="uid://cjm10wn0k5s25" path="res://design_raw/ui_ux/menu/create_lobby/arrow.png" id="8_qw1rm"]
+[ext_resource type="Texture2D" uid="uid://c0cpd84ur5ax3" path="res://design_raw/ui_ux/menu/create_lobby/border_select_map.png" id="9_tvtuk"]
+[ext_resource type="Texture2D" uid="uid://dj3262dqwn72t" path="res://design_raw/ui_ux/menu/create_lobby/arrow_right.png" id="11_2cwk0"]
+[ext_resource type="FontFile" uid="uid://wcg3fbs7mqr0" path="res://design_raw/font/MinecraftBold.otf" id="12_apfnb"]
+[ext_resource type="Texture2D" uid="uid://cdbflx0bw4xrc" path="res://ressource/logo/test_avatar.png" id="12_vcrrh"]
+[ext_resource type="Texture2D" uid="uid://doa852biixwcs" path="res://design_raw/ui_ux/menu/windows/btn_small.png" id="13_s1tmi"]
+[ext_resource type="Texture2D" uid="uid://da6ftexmuvdoa" path="res://design_raw/ui_ux/voleur_classe.png" id="14_2ss4k"]
+[ext_resource type="StyleBox" uid="uid://bndkfqj4pbf71" path="res://design_raw/ui_ux/styleBoxTexture/btn_small/btn_normal.tres" id="14_g0o2j"]
+[ext_resource type="Texture2D" uid="uid://dbk8hoxrdeufp" path="res://design_raw/ui_ux/PopUp/HUD/frame_players_adaptable.png" id="15_2cwk0"]
+[ext_resource type="Texture2D" uid="uid://wep18p1vsy2w" path="res://design_raw/ui_ux/double_classe.png" id="15_o2mdy"]
+[ext_resource type="Texture2D" uid="uid://byjfs7er0surj" path="res://design_raw/ui_ux/case_depart_classe.png" id="16_uny65"]
+[ext_resource type="Texture2D" uid="uid://b2yjne6o7itbo" path="res://design_raw/ui_ux/PopUp/HUD/frame_classe_containers.png" id="17_2cwk0"]
+[ext_resource type="Texture2D" uid="uid://dhk1p7njtrs07" path="res://design_raw/ui_ux/PopUp/HUD/roll_dice_button.png" id="22_2cwk0"]
+[ext_resource type="Texture2D" uid="uid://6xwowtuivslu" path="res://design_raw/ui_ux/menu/cameraButton.png" id="23_2cwk0"]
+[ext_resource type="Texture2D" uid="uid://d02ltbnu4nwpp" path="res://design_raw/ui_ux/PopUp/HUD/endtime_button.png" id="23_apfnb"]
+
+[sub_resource type="GDScript" id="GDScript_tvtuk"]
+script/source = "extends Control
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+
+
+func _on_btn_create_pressed() -> void:
+	hide()
+"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wg128"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4t01k"]
+load_path = "res://.godot/imported/input.png-37361f7277de7a1e4bfb4a227191fb0f.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qw1rm"]
+texture = SubResource("CompressedTexture2D_4t01k")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tvtuk"]
+load_path = "res://.godot/imported/login_focus.png-719b3575ddc02406d511d991fab7088a.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2cwk0"]
+texture = SubResource("CompressedTexture2D_tvtuk")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_apfnb"]
+texture = ExtResource("8_qw1rm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s1tmi"]
+texture = ExtResource("8_qw1rm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g0o2j"]
+texture = ExtResource("8_qw1rm")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iexcy"]
+texture = ExtResource("11_2cwk0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fqh7y"]
+texture = ExtResource("11_2cwk0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_56liu"]
+texture = ExtResource("11_2cwk0")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kt053"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0xfgy"]
+texture = SubResource("CompressedTexture2D_kt053")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_16ws5"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dtuje"]
+texture = SubResource("CompressedTexture2D_16ws5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g2axa"]
+texture = ExtResource("13_s1tmi")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kdq6n"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u4rgl"]
+texture = SubResource("CompressedTexture2D_kdq6n")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n8t3k"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rgdey"]
+texture = SubResource("CompressedTexture2D_n8t3k")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tgqwl"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ir2v"]
+texture = SubResource("CompressedTexture2D_tgqwl")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i4l36"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jhmwc"]
+texture = SubResource("CompressedTexture2D_i4l36")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o2i1p"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e76x8"]
+texture = SubResource("CompressedTexture2D_o2i1p")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mpq5w"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l47a5"]
+texture = SubResource("CompressedTexture2D_mpq5w")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vw4d4"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0b7rh"]
+texture = SubResource("CompressedTexture2D_vw4d4")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fhj6f"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_18ac8"]
+texture = SubResource("CompressedTexture2D_fhj6f")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x6r6l"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yfn1j"]
+texture = SubResource("CompressedTexture2D_x6r6l")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ova5w"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8hw14"]
+texture = SubResource("CompressedTexture2D_ova5w")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qt465"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2j31j"]
+texture = SubResource("CompressedTexture2D_qt465")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3wi6f"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vehnd"]
+texture = SubResource("CompressedTexture2D_3wi6f")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_t4wfq"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1vm5f"]
+texture = SubResource("CompressedTexture2D_t4wfq")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8gpns"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_phjsb"]
+texture = SubResource("CompressedTexture2D_8gpns")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wwu2f"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u1n7h"]
+texture = SubResource("CompressedTexture2D_wwu2f")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8kl3o"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rx7fi"]
+texture = SubResource("CompressedTexture2D_8kl3o")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7p65h"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c756v"]
+texture = SubResource("CompressedTexture2D_7p65h")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uh2cd"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fgcgh"]
+texture = SubResource("CompressedTexture2D_uh2cd")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vy43q"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dx7b7"]
+texture = SubResource("CompressedTexture2D_vy43q")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3fg5n"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dl8a2"]
+texture = SubResource("CompressedTexture2D_3fg5n")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ovnjn"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8erfw"]
+texture = SubResource("CompressedTexture2D_ovnjn")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vpcdf"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_utsaa"]
+texture = SubResource("CompressedTexture2D_vpcdf")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0k1hf"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ii8mv"]
+texture = SubResource("CompressedTexture2D_0k1hf")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2cwk0"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ltkda"]
+load_path = "res://.godot/imported/btn.png-fa445319dea40236f5d1a2965a282dba.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tvtuk"]
+texture = SubResource("CompressedTexture2D_ltkda")
+expand_margin_left = 30.0
+expand_margin_right = 30.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6mjyx"]
+load_path = "res://.godot/imported/btn_press.png-b41d0ffec869b3e3d4151bba369ec8a2.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wq333"]
+texture = SubResource("CompressedTexture2D_6mjyx")
+expand_margin_left = 30.0
+expand_margin_right = 30.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2xw17"]
+load_path = "res://.godot/imported/btn_select.png-6dea804daaa42e3e5d8f9681121c2296.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g1oda"]
+texture = SubResource("CompressedTexture2D_2xw17")
+expand_margin_left = 30.0
+expand_margin_right = 30.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hv24w"]
+load_path = "res://.godot/imported/btn_select.png-6dea804daaa42e3e5d8f9681121c2296.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jbfib"]
+texture = SubResource("CompressedTexture2D_hv24w")
+expand_margin_left = 30.0
+expand_margin_right = 30.0
+
+[node name="Guide" type="Control" unique_id=112582406]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_tvtuk")
+
+[node name="MainPanel" type="Panel" parent="." unique_id=756840392]
+clip_children = 1
+custom_minimum_size = Vector2(1000, 800)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -275.0
+offset_top = -400.0
+offset_right = 275.0
+offset_bottom = 400.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wg128")
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel" unique_id=519204490]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4t01k")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel" unique_id=729878463]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 104
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainPanel/MarginContainer" unique_id=1271520215]
+layout_mode = 2
+
+[node name="Content" type="VBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer" unique_id=85898145]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 64
+
+[node name="Guide" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=481747132]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 48
+text = "GUIDE"
+
+[node name="raccourcis" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1240835407]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "Aller directement à :"
+horizontal_alignment = 1
+
+[node name="boutons_raccourcis" type="VBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1879503725]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="btn_create_game" type="Button" parent="MainPanel/MarginContainer/ScrollContainer/Content/boutons_raccourcis" unique_id=35849070 node_paths=PackedStringArray("scroll_container", "target_label")]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.8132577, 0.8132577, 0.81325763, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_qw1rm")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("4_tvtuk")
+theme_override_styles/pressed = ExtResource("5_2cwk0")
+theme_override_styles/hover = ExtResource("6_apfnb")
+text = "CREER UNE PARTIE"
+script = ExtResource("7_tvtuk")
+scroll_container = NodePath("../../..")
+target_label = NodePath("../../Creer_une_partie")
+
+[node name="btn_join_game" type="Button" parent="MainPanel/MarginContainer/ScrollContainer/Content/boutons_raccourcis" unique_id=963095227 node_paths=PackedStringArray("scroll_container", "target_label")]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.8117647, 0.8117647, 0.8117647, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_qw1rm")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("4_tvtuk")
+theme_override_styles/pressed = ExtResource("5_2cwk0")
+theme_override_styles/hover = ExtResource("6_apfnb")
+text = "REJOINDRE UNE PARTIE"
+script = ExtResource("7_tvtuk")
+scroll_container = NodePath("../../..")
+target_label = NodePath("../../Rejoindre_une_partie")
+
+[node name="btn_join_game2" type="Button" parent="MainPanel/MarginContainer/ScrollContainer/Content/boutons_raccourcis" unique_id=1101403004 node_paths=PackedStringArray("scroll_container", "target_label")]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.8117647, 0.8117647, 0.8117647, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_qw1rm")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = ExtResource("4_tvtuk")
+theme_override_styles/pressed = ExtResource("5_2cwk0")
+theme_override_styles/hover = ExtResource("6_apfnb")
+text = "DEBUT DE LA PARTIE"
+script = ExtResource("7_tvtuk")
+scroll_container = NodePath("../../..")
+target_label = NodePath("../../Debut_de_la_partie")
+
+[node name="Rejoindre_une_partie" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=304207337]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 42
+text = "Rejoindre une partie"
+horizontal_alignment = 1
+
+[node name="Join_menu" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1184983217]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "Rejoindre une partie : Choisis ce bouton si une partie existe déjà. Tu pourras rejoindre un lobby créé par un autre joueur afin de participer à la partie."
+autowrap_mode = 2
+
+[node name="button_join" type="Control" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=811495838]
+custom_minimum_size = Vector2(378, 78)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/button_join" unique_id=954175448]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_4t01k")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/button_join" unique_id=482627660]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.5
+offset_top = -10.5
+offset_right = 160.5
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qw1rm")
+theme_override_font_sizes/font_size = 20
+text = "REJOINDRE UNE PARTIE"
+
+[node name="join_game" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=210184817]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "Pour rejoindre une partie, entre le code du lobby donné par l’hôte. Le jeu retrouve automatiquement la bonne partie, puis tu peux accéder au lobby avec les autres joueurs."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="CodeSection" type="VBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1114907430]
+custom_minimum_size = Vector2(490, 94)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CodeLabel" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/CodeSection" unique_id=2118300615]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 24
+text = "CODE DU LOBBY :"
+
+[node name="CodeLineEdit" type="LineEdit" parent="MainPanel/MarginContainer/ScrollContainer/Content/CodeSection" unique_id=557233357]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_qw1rm")
+theme_override_styles/focus = SubResource("StyleBoxTexture_2cwk0")
+placeholder_text = "ex: 123456"
+alignment = 1
+
+[node name="Creer_une_partie" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=78542943]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 42
+text = "Creer une partie"
+horizontal_alignment = 1
+
+[node name="Creation" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1501534911]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "Creer une partie : Choisis ce bouton si tu veux lancer une nouvelle partie. Tu pourras ensuite configurer la partie, inviter les autres joueurs et attendre qu’ils rejoignent le lobby."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="button_create" type="Control" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1708131041]
+custom_minimum_size = Vector2(378, 78)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/button_create" unique_id=460552110]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_4t01k")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/button_create" unique_id=410813479]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -10.5
+offset_right = 128.0
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qw1rm")
+theme_override_font_sizes/font_size = 20
+text = "CREER UNE PARTIE"
+
+[node name="lobby_create" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1670273972]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "Après avoir choisi \"Creer une partie\", tu arrives sur le menu de configuration.
+Cet écran permet de préparer la partie avant de lancer le lobby : choisir la carte, définir le nombre de tours et choisir l’argent de départ."
+autowrap_mode = 2
+
+[node name="choix_map" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=379339294]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "Utilise les flèches gauche et droite pour choisir la carte du plateau.
+Chaque carte peut proposer une ambiance ou une disposition différente."
+autowrap_mode = 2
+
+[node name="mapchoice" type="HBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=959153681]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/separation = 40
+
+[node name="btn_arrow_left" type="Button" parent="MainPanel/MarginContainer/ScrollContainer/Content/mapchoice" unique_id=1616453605]
+custom_minimum_size = Vector2(42, 61)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_apfnb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_s1tmi")
+theme_override_styles/hover = SubResource("StyleBoxTexture_g0o2j")
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/mapchoice" unique_id=1263326223]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("9_tvtuk")
+
+[node name="MapPreview" type="TextureRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/mapchoice/TextureRect" unique_id=2050300579]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 14.0
+offset_top = 2.0
+offset_right = 494.0
+offset_bottom = 342.0
+scale = Vector2(0.6500274, 0.6500274)
+texture = ExtResource("6_qmtm5")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="btn_arrow_right" type="Button" parent="MainPanel/MarginContainer/ScrollContainer/Content/mapchoice" unique_id=1224936777]
+custom_minimum_size = Vector2(42, 61)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_iexcy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fqh7y")
+theme_override_styles/hover = SubResource("StyleBoxTexture_56liu")
+
+[node name="choix_tours" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=123674136]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "Choisis la durée de la partie.
+En mode illimité, la partie continue jusqu’à ce qu’il ne reste qu’un joueur non ruiné.
+Avec un nombre de tours limité, la partie s’arrête à la fin du nombre de tours choisi, et le joueur le plus riche gagne."
+autowrap_mode = 2
+
+[node name="ToursSection" type="VBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=693790363]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="ToursLabel" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/ToursSection" unique_id=1491847715]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "NOMBRE DE TOURS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ToursContainer" type="HBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/ToursSection" unique_id=746607305]
+custom_minimum_size = Vector2(610, 55)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="btn_ilimite" type="Button" parent="MainPanel/MarginContainer/ScrollContainer/Content/ToursSection/ToursContainer" unique_id=845286133]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_apfnb")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxTexture_0xfgy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dtuje")
+theme_override_styles/hover = SubResource("StyleBoxTexture_g2axa")
+text = "Ilimité"
+
+[node name="btn_20tours" type="Button" parent="MainPanel/MarginContainer/ScrollContainer/Content/ToursSection/ToursContainer" unique_id=1276702830]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_apfnb")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_u4rgl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rgdey")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0ir2v")
+text = "20 TOURS"
+
+[node name="btn_30tours" type="Button" parent="MainPanel/MarginContainer/ScrollContainer/Content/ToursSection/ToursContainer" unique_id=647073935]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_apfnb")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_jhmwc")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_e76x8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_l47a5")
+text = "30 TOURS"
+
+[node name="btn_40tours" type="Button" parent="MainPanel/MarginContainer/ScrollContainer/Content/ToursSection/ToursContainer" unique_id=492090469]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_apfnb")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_0b7rh")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_18ac8")
+theme_override_styles/hover = ExtResource("14_g0o2j")
+text = "40 TOURS"
+
+[node name="btn_50tours" type="Button" parent="MainPanel/MarginContainer/ScrollContainer/Content/ToursSection/ToursContainer" unique_id=84159837]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_apfnb")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_yfn1j")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8hw14")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2j31j")
+text = "50 TOURS"
+
+[node name="choix_argent" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=771141402]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "Choisis l’argent de départ de chaque joueur.
+Plus le montant est élevé, plus les joueurs peuvent acheter rapidement des propriétés au début de la partie."
+autowrap_mode = 2
+
+[node name="ArgentSection" type="VBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1990222176]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="ArgentLabel" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/ArgentSection" unique_id=1033766795]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "ARGENT DE DEPART"
+horizontal_alignment = 1
+
+[node name="ArgentsContainer" type="HBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/ArgentSection" unique_id=816212342]
+custom_minimum_size = Vector2(610, 55)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="btn_1000M" type="Button" parent="MainPanel/MarginContainer/ScrollContainer/Content/ArgentSection/ArgentsContainer" unique_id=510060503]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_apfnb")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_vehnd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1vm5f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_phjsb")
+text = "1000 M"
+
+[node name="btn_1500M" type="Button" parent="MainPanel/MarginContainer/ScrollContainer/Content/ArgentSection/ArgentsContainer" unique_id=2029701226]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_apfnb")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_u1n7h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rx7fi")
+theme_override_styles/hover = SubResource("StyleBoxTexture_c756v")
+text = "1500 M"
+
+[node name="btn_2000M" type="Button" parent="MainPanel/MarginContainer/ScrollContainer/Content/ArgentSection/ArgentsContainer" unique_id=189125638]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_apfnb")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_fgcgh")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dx7b7")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dl8a2")
+text = "2000 M"
+
+[node name="btn_3000M" type="Button" parent="MainPanel/MarginContainer/ScrollContainer/Content/ArgentSection/ArgentsContainer" unique_id=783976810]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_apfnb")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_8erfw")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_utsaa")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ii8mv")
+text = "3000 M"
+
+[node name="create_game" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=742847203]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "Une fois les paramètres choisis, clique sur Créer la partie pour ouvrir le lobby et permettre aux autres joueurs de rejoindre."
+autowrap_mode = 2
+
+[node name="create_game2" type="Control" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=2033285356]
+custom_minimum_size = Vector2(291, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/create_game2" unique_id=738520583]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_4t01k")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/create_game2" unique_id=619794160]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.5
+offset_top = -10.5
+offset_right = 119.5
+offset_bottom = 10.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qw1rm")
+theme_override_font_sizes/font_size = 20
+text = "CREER LA PARTIE"
+
+[node name="players_lobbyscreen" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=275111197]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "Le panneau Joueurs affiche les joueurs présents dans le lobby. Il permet aussi de voir rapidement qui est déjà prêt et qui ne l’est pas encore."
+autowrap_mode = 2
+
+[node name="Player2" type="Control" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=913899746]
+custom_minimum_size = Vector2(316, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Background" type="TextureRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/Player2" unique_id=2023923945]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_2cwk0")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/Player2" unique_id=829645369]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ElementsPlayer" type="HBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/Player2/MarginContainer" unique_id=1895972934]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Avatar" type="TextureRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/Player2/MarginContainer/ElementsPlayer" unique_id=1195973893]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("12_vcrrh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/Player2/MarginContainer/ElementsPlayer" unique_id=1466139928]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="pseudo" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/Player2/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=774521659]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 24
+text = "Player 1"
+
+[node name="readystatus" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/Player2/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=504691491]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 24
+text = "Non pret"
+
+[node name="classe_lobbyscreen" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1475214058]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "Avant de lancer la partie, chaque joueur choisit une classe. Chaque classe donne un avantage spécial qui peut influencer la stratégie pendant la partie."
+autowrap_mode = 2
+
+[node name="Classe 1" type="Panel" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1007565849]
+custom_minimum_size = Vector2(500, 180)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2cwk0")
+
+[node name="frame" type="TextureRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 1" unique_id=200478044]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_2cwk0")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 1" unique_id=2048214198]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 1/MarginContainer" unique_id=1717571041]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 1/MarginContainer/HBoxContainer" unique_id=604367179]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("14_2ss4k")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 1/MarginContainer/HBoxContainer" unique_id=626533136]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 1/MarginContainer/HBoxContainer/VBoxContainer" unique_id=59887308]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 20
+text = "LE VOLEUR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 1/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1226332728]
+custom_minimum_size = Vector2(330, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 15
+text = "Chaque fois que vous atterrissez sur une case occupée par un adversaire, vous lui dérobez un montant 200M"
+autowrap_mode = 2
+
+[node name="Classe 2" type="Panel" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1929721504]
+custom_minimum_size = Vector2(500, 180)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2cwk0")
+
+[node name="frame" type="TextureRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 2" unique_id=658888606]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_2cwk0")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 2" unique_id=1647552629]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 2/MarginContainer" unique_id=1047732736]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 2/MarginContainer/HBoxContainer" unique_id=160523624]
+custom_minimum_size = Vector2(144, 108)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("15_o2mdy")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 2/MarginContainer/HBoxContainer" unique_id=754692966]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 2/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1766826167]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 20
+text = "LE CHANCEUX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 2/MarginContainer/HBoxContainer/VBoxContainer" unique_id=825845693]
+custom_minimum_size = Vector2(327, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 15
+text = "Vous maîtrisez l'art du hasard. À chaque fois que vous réalisez un double aux dés, la Banque vous verse 25M."
+autowrap_mode = 2
+
+[node name="Classe 3" type="Panel" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1723821318]
+custom_minimum_size = Vector2(500, 180)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2cwk0")
+
+[node name="frame" type="TextureRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 3" unique_id=1774313007]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_2cwk0")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 3" unique_id=1563146038]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 3/MarginContainer" unique_id=1025530204]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 3/MarginContainer/HBoxContainer" unique_id=269184762]
+custom_minimum_size = Vector2(135, 126)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("16_uny65")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 3/MarginContainer/HBoxContainer" unique_id=842011310]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 3/MarginContainer/HBoxContainer/VBoxContainer" unique_id=2099880229]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 20
+text = "LE BANQUIER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/Classe 3/MarginContainer/HBoxContainer/VBoxContainer" unique_id=606738684]
+custom_minimum_size = Vector2(330, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 15
+text = "Votre capital fructifie à chaque passage. Vous recevez un bonus de 75M sur la prime de la case Départ."
+autowrap_mode = 2
+
+[node name="info_lobbyscreen" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=610419241]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "Le panneau Lobby rappelle les paramètres de la partie : la carte choisie, le nombre de tours et l’argent de départ. Le code de la partie peut être partagé aux autres joueurs pour qu’ils rejoignent le lobby."
+autowrap_mode = 2
+
+[node name="ready_lobbyscreen" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1284993888]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "Une fois ta classe choisie, clique sur Prêt. La partie démarre lorsque tous les joueurs sont prêts."
+autowrap_mode = 2
+
+[node name="bouton_ready" type="Control" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=39003459]
+custom_minimum_size = Vector2(350, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/bouton_ready" unique_id=34029494]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_4t01k")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/bouton_ready" unique_id=172802528]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.5
+offset_top = -11.5
+offset_right = 47.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qw1rm")
+theme_override_font_sizes/font_size = 24
+text = "JE SUIS PRET"
+
+[node name="Debut_de_la_partie" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1644586511]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 42
+text = "Debut de la partie"
+horizontal_alignment = 1
+
+[node name="info_players" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1794189230]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "À gauche de l’écran, le HUD affiche les informations de chaque joueur : son pion, son pseudo et l’argent qu’il possède. Le montant d’argent change de couleur selon la situation : il devient vert lorsqu’un joueur gagne de l’argent, et rouge lorsqu’il en perd"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Player" type="Control" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1454929591]
+custom_minimum_size = Vector2(316, 128)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Background" type="TextureRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/Player" unique_id=346000963]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("15_2cwk0")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/Player" unique_id=1507917207]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ElementsPlayer" type="HBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/Player/MarginContainer" unique_id=995916057]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Avatar" type="TextureRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/Player/MarginContainer/ElementsPlayer" unique_id=985225275]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("12_vcrrh")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content/Player/MarginContainer/ElementsPlayer" unique_id=1810461522]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="pseudo" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/Player/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=475890651]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 24
+text = "Player 1"
+
+[node name="readystatus" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/Player/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=1611608159]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 24
+text = "$1500"
+
+[node name="historique" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1619426615]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "À droite, l’historique des actions permet de suivre les événements importants de la partie au fur et à mesure."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="boutonbas_ingame" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1754175023]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "En bas de l’écran, les boutons d’action permettent de jouer son tour. Le joueur peut par exemple lancer les dés puis terminer son tour lorsque ses actions sont terminées."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="BoutonsBasEcran" type="HBoxContainer" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=139605783]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="ROLLDICE" type="Control" parent="MainPanel/MarginContainer/ScrollContainer/Content/BoutonsBasEcran" unique_id=822134488]
+custom_minimum_size = Vector2(320, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/BoutonsBasEcran/ROLLDICE" unique_id=591208048]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 38.0
+offset_bottom = -37.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="BoutonRollDice" type="TextureButton" parent="MainPanel/MarginContainer/ScrollContainer/Content/BoutonsBasEcran/ROLLDICE" unique_id=2146081803]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("22_2cwk0")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextRolldice" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/BoutonsBasEcran/ROLLDICE" unique_id=1749971904]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -129.0
+offset_top = -14.5
+offset_right = 129.0
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_apfnb")
+theme_override_font_sizes/font_size = 28
+text = "LANCER LES DES"
+
+[node name="ENDTURN" type="Control" parent="MainPanel/MarginContainer/ScrollContainer/Content/BoutonsBasEcran" unique_id=1013706634]
+custom_minimum_size = Vector2(320, 120)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/BoutonsBasEcran/ENDTURN" unique_id=1038466890]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="BoutonEndTurn" type="TextureButton" parent="MainPanel/MarginContainer/ScrollContainer/Content/BoutonsBasEcran/ENDTURN" unique_id=594953836]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("23_apfnb")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextRolldice" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content/BoutonsBasEcran/ENDTURN" unique_id=1108224903]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -14.5
+offset_right = 80.0
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_apfnb")
+theme_override_font_sizes/font_size = 28
+text = "FIN TOUR"
+
+[node name="bouton_camera" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1067984656]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "Le bouton en bas à droite permet de changer la vue de la partie. Il est possible d’alterner entre une vue d’ensemble du plateau et une vue plus proche, centrée sur l’emplacement du pion du joueur."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CameraControl" type="Control" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=996795886]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ColorRect" type="ColorRect" parent="MainPanel/MarginContainer/ScrollContainer/Content/CameraControl" unique_id=498454486]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Camera" type="TextureButton" parent="MainPanel/MarginContainer/ScrollContainer/Content/CameraControl" unique_id=1865354388]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("23_2cwk0")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ensemble_hud_ingame" type="Label" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=797704099]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7sexd")
+theme_override_font_sizes/font_size = 32
+text = "Pendant la partie, le plateau est affiché au centre de l’écran, tandis que le HUD regroupe toutes les informations utiles : état des joueurs, historique et actions disponibles."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="btn_create" type="Button" parent="MainPanel/MarginContainer/ScrollContainer/Content" unique_id=1744075739]
+custom_minimum_size = Vector2(290, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("12_apfnb")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_tvtuk")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wq333")
+theme_override_styles/hover = SubResource("StyleBoxTexture_g1oda")
+theme_override_styles/focus = SubResource("StyleBoxTexture_jbfib")
+text = "QUITTER"
+
+[connection signal="pressed" from="MainPanel/MarginContainer/ScrollContainer/Content/btn_create" to="." method="_on_btn_create_pressed"]

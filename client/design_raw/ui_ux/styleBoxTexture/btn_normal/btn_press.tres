@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://djx64k2pflpki"]
+
+[ext_resource type="Texture2D" uid="uid://dksnkc2e2tu4j" path="res://design_raw/ui_ux/login_screen/btn_press.png" id="1_hbira"]
+
+[resource]
+texture = ExtResource("1_hbira")
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0

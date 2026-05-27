@@ -1,0 +1,752 @@
+[gd_scene format=3 uid="uid://cj0cqipm7vudi"]
+
+[ext_resource type="Script" uid="uid://dm462gdav5del" path="res://scripts/lobby/lobby_screen.gd" id="1_i3eaa"]
+[ext_resource type="Texture2D" uid="uid://cie6b6xboui27" path="res://ressource/background/image (8).jpg" id="2_cfg5i"]
+[ext_resource type="Texture2D" uid="uid://b2b616r5ac2av" path="res://ressource/logo/lobbyplayer_container.png" id="2_m1dqt"]
+[ext_resource type="FontFile" uid="uid://mfwhpwxq8htj" path="res://ressource/fonts/Minecraft 2.ttf" id="2_pa41s"]
+[ext_resource type="Texture2D" uid="uid://co7cc3fig2e4w" path="res://design_raw/ui_ux/menu/create_lobby/border_background.png" id="2_wou2a"]
+[ext_resource type="Texture2D" uid="uid://cdbflx0bw4xrc" path="res://ressource/logo/test_avatar.png" id="4_p1u3x"]
+[ext_resource type="Texture2D" uid="uid://mb8anckjr8ip" path="res://design_raw/ui_ux/menu/btn_press.png" id="5_r7mjf"]
+[ext_resource type="Texture2D" uid="uid://dbk8hoxrdeufp" path="res://design_raw/ui_ux/PopUp/HUD/frame_players_adaptable.png" id="6_8i6uw"]
+[ext_resource type="Script" uid="uid://bbuclcvd0bswk" path="res://scenes/Menu/selection_classe.gd" id="7_wou2a"]
+[ext_resource type="Texture2D" uid="uid://da6ftexmuvdoa" path="res://design_raw/ui_ux/voleur_classe.png" id="8_wou2a"]
+[ext_resource type="Texture2D" uid="uid://byjfs7er0surj" path="res://design_raw/ui_ux/case_depart_classe.png" id="9_r7mjf"]
+[ext_resource type="Texture2D" uid="uid://b2yjne6o7itbo" path="res://design_raw/ui_ux/PopUp/HUD/frame_classe_containers.png" id="9_s0tja"]
+[ext_resource type="Texture2D" uid="uid://wep18p1vsy2w" path="res://design_raw/ui_ux/double_classe.png" id="10_cfg5i"]
+[ext_resource type="Texture2D" uid="uid://c0cpd84ur5ax3" path="res://design_raw/ui_ux/menu/create_lobby/border_select_map.png" id="11_wou2a"]
+[ext_resource type="Texture2D" uid="uid://ccdmast3nay3g" path="res://ressource/background/ingame_board.png" id="12_r7mjf"]
+[ext_resource type="FontFile" uid="uid://c4cse1ewgl82i" path="res://design_raw/font/Monocraft.ttf" id="12_wou2a"]
+[ext_resource type="StyleBox" uid="uid://i3wv8ffd343" path="res://design_raw/ui_ux/styleBoxTexture/btn_normal/btn_normal.tres" id="13_r7mjf"]
+[ext_resource type="StyleBox" uid="uid://djx64k2pflpki" path="res://design_raw/ui_ux/styleBoxTexture/btn_normal/btn_press.tres" id="14_cfg5i"]
+[ext_resource type="FontFile" uid="uid://qmpo1m57xo05" path="res://design_raw/font/minecraft-bold-basic.otf" id="14_r7mjf"]
+[ext_resource type="StyleBox" uid="uid://8r0loxx2io3" path="res://design_raw/ui_ux/styleBoxTexture/btn_normal/btn_hover.tres" id="15_8i6uw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b2mx7"]
+texture = ExtResource("2_wou2a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8i6uw"]
+texture = ExtResource("2_wou2a")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uqvid"]
+texture = ExtResource("9_s0tja")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s0tja"]
+texture = ExtResource("9_s0tja")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ckx8f"]
+texture = ExtResource("2_wou2a")
+
+[node name="LobbyScreen" type="Control" unique_id=1475747288]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i3eaa")
+
+[node name="textureRect" type="TextureRect" parent="." unique_id=1033252011]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_cfg5i")
+
+[node name="MainPanel" type="Panel" parent="." unique_id=1828222804]
+custom_minimum_size = Vector2(1400, 800)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel" unique_id=1084298325]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="Content" type="HBoxContainer" parent="MainPanel/MarginContainer" unique_id=535826902]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="PlayersPanel" type="VBoxContainer" parent="MainPanel/MarginContainer/Content" unique_id=1492998419]
+custom_minimum_size = Vector2(420, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="Panel" type="Panel" parent="MainPanel/MarginContainer/Content/PlayersPanel" unique_id=364685535]
+custom_minimum_size = Vector2(550, 952)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_b2mx7")
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel" unique_id=539981151]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_m1dqt")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel" unique_id=1085337158]
+custom_minimum_size = Vector2(400, 680)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 75
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="PlayersTitle" type="Label" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer" unique_id=1618297617]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 38
+text = "JOUEURS"
+
+[node name="PlayersContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer" unique_id=1170776432]
+custom_minimum_size = Vector2(316, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="Player1" type="Control" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer" unique_id=1662259498]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player1" unique_id=581956331]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Background" type="TextureRect" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player1" unique_id=123062040]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_8i6uw")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player1" unique_id=2141092806]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ElementsPlayer" type="HBoxContainer" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player1/MarginContainer" unique_id=561863980]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Avatar" type="TextureRect" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player1/MarginContainer/ElementsPlayer" unique_id=992359687]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_p1u3x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player1/MarginContainer/ElementsPlayer" unique_id=460230]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="pseudo" type="Label" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player1/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=1325052026]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 24
+text = "Player 1"
+
+[node name="readystatus" type="Label" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player1/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=460088617]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 24
+text = "Non pret"
+
+[node name="Player2" type="Control" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer" unique_id=97703133]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player2" unique_id=743973552]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Background" type="TextureRect" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player2" unique_id=1249619265]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_8i6uw")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player2" unique_id=194774243]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ElementsPlayer" type="HBoxContainer" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player2/MarginContainer" unique_id=1437869791]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Avatar" type="TextureRect" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player2/MarginContainer/ElementsPlayer" unique_id=1945052599]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture = ExtResource("4_p1u3x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player2/MarginContainer/ElementsPlayer" unique_id=1303950613]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="pseudo" type="Label" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player2/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=1156016680]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 24
+text = "Player 1"
+
+[node name="readystatus" type="Label" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player2/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=981132720]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 24
+text = "Non pret"
+
+[node name="Player3" type="Control" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer" unique_id=808473941]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player3" unique_id=1704447571]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Background" type="TextureRect" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player3" unique_id=1417856759]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_8i6uw")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player3" unique_id=1430465955]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ElementsPlayer" type="HBoxContainer" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player3/MarginContainer" unique_id=2014344119]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Avatar" type="TextureRect" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player3/MarginContainer/ElementsPlayer" unique_id=1674058408]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture = ExtResource("4_p1u3x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player3/MarginContainer/ElementsPlayer" unique_id=1654948003]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="pseudo" type="Label" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player3/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=1659530799]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 24
+text = "Player 1"
+
+[node name="readystatus" type="Label" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player3/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=1576095119]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 24
+text = "Non pret"
+
+[node name="Player4" type="Control" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer" unique_id=583467517]
+custom_minimum_size = Vector2(0, 128)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player4" unique_id=1719803006]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Background" type="TextureRect" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player4" unique_id=430855497]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_r7mjf")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player4" unique_id=333240737]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ElementsPlayer" type="HBoxContainer" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player4/MarginContainer" unique_id=425028100]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Avatar" type="TextureRect" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player4/MarginContainer/ElementsPlayer" unique_id=42127724]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+texture = ExtResource("4_p1u3x")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player4/MarginContainer/ElementsPlayer" unique_id=792080357]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="pseudo" type="Label" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player4/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=1911107128]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 24
+text = "Player 1"
+
+[node name="readystatus" type="Label" parent="MainPanel/MarginContainer/Content/PlayersPanel/Panel/MarginContainer/PlayersContainer/Player4/MarginContainer/ElementsPlayer/VBoxContainer" unique_id=1467491337]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 24
+text = "Non pret"
+
+[node name="PlayerClass" type="Panel" parent="MainPanel/MarginContainer/Content" unique_id=628958305]
+custom_minimum_size = Vector2(600, 800)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8i6uw")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/MarginContainer/Content/PlayerClass" unique_id=1914903219]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 77
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="Label" type="Label" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer" unique_id=1304740446]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 38
+text = "CHOIX DE LA CLASSE"
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer" unique_id=1481964592]
+layout_mode = 2
+theme_override_constants/separation = 75
+script = ExtResource("7_wou2a")
+
+[node name="Control" type="Control" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer" unique_id=2059990267]
+layout_mode = 2
+
+[node name="Classe 1" type="Panel" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer" unique_id=975152218]
+custom_minimum_size = Vector2(500, 180)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_uqvid")
+
+[node name="ColorRect" type="ColorRect" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 1" unique_id=2037404511]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 1" unique_id=1684232105]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 1/HBoxContainer" unique_id=1368603910]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("8_wou2a")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 1/HBoxContainer" unique_id=112920213]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 1/HBoxContainer/VBoxContainer" unique_id=265364436]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 20
+text = "LE VOLEUR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 1/HBoxContainer/VBoxContainer" unique_id=331376098]
+custom_minimum_size = Vector2(330, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 15
+text = "Chaque fois que vous atterrissez sur une case occupée par un adversaire, vous lui dérobez un montant 200M"
+autowrap_mode = 2
+
+[node name="Classe 2" type="Panel" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer" unique_id=20453201]
+custom_minimum_size = Vector2(500, 180)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_s0tja")
+
+[node name="ColorRect" type="ColorRect" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 2" unique_id=1201125535]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 2" unique_id=1829028180]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 2/HBoxContainer" unique_id=1737259837]
+custom_minimum_size = Vector2(160, 120)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("10_cfg5i")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 2/HBoxContainer" unique_id=1066764104]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 2/HBoxContainer/VBoxContainer" unique_id=1333582966]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 20
+text = "LE CHANCEUX"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 2/HBoxContainer/VBoxContainer" unique_id=534699307]
+custom_minimum_size = Vector2(327, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 15
+text = "Vous maîtrisez l'art du hasard. À chaque fois que vous réalisez un double aux dés, la Banque vous verse 25M."
+autowrap_mode = 2
+
+[node name="Classe 3" type="Panel" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer" unique_id=1093236642]
+custom_minimum_size = Vector2(500, 180)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_s0tja")
+
+[node name="ColorRect" type="ColorRect" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 3" unique_id=185886159]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 3" unique_id=1101003097]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 3/HBoxContainer" unique_id=777965052]
+custom_minimum_size = Vector2(150, 140)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("9_r7mjf")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 3/HBoxContainer" unique_id=1094458442]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 3/HBoxContainer/VBoxContainer" unique_id=1250296599]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 20
+text = "LE BANQUIER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MainPanel/MarginContainer/Content/PlayerClass/MarginContainer/VBoxContainer/Classe 3/HBoxContainer/VBoxContainer" unique_id=1721381285]
+custom_minimum_size = Vector2(330, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 15
+text = "Votre capital fructifie à chaque passage. Vous recevez un bonus de 75M sur la prime de la case Départ."
+autowrap_mode = 2
+
+[node name="Info" type="Panel" parent="MainPanel/MarginContainer/Content" unique_id=759606636]
+custom_minimum_size = Vector2(680, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_styles/panel = SubResource("StyleBoxTexture_ckx8f")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/MarginContainer/Content/Info" unique_id=607317694]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 80
+
+[node name="InfoPanel" type="VBoxContainer" parent="MainPanel/MarginContainer/Content/Info/MarginContainer" unique_id=1036585164]
+custom_minimum_size = Vector2(620, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 30
+alignment = 2
+
+[node name="Title" type="Label" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel" unique_id=216146887]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("12_wou2a")
+theme_override_font_sizes/font_size = 38
+text = "LOBBY"
+
+[node name="MapPreview" type="TextureRect" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel" unique_id=66578522]
+custom_minimum_size = Vector2(459, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("11_wou2a")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel/MapPreview" unique_id=834479588]
+custom_minimum_size = Vector2(405, 210)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_r7mjf")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="GameSettings" type="VBoxContainer" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel" unique_id=1657796385]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel/GameSettings" unique_id=1563023304]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="TurnsLabel" type="Label" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel/GameSettings/HBoxContainer" unique_id=843684349]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 24
+text = "Nombre de tours :"
+
+[node name="TurnValue" type="Label" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel/GameSettings/HBoxContainer" unique_id=177022832]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 24
+text = "10"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel/GameSettings" unique_id=1360161458]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="MoneyLabel" type="Label" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel/GameSettings/HBoxContainer2" unique_id=1438566969]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 24
+text = "Argent de départ : "
+
+[node name="MoneyValue" type="Label" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel/GameSettings/HBoxContainer2" unique_id=383020129]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 24
+text = "1500 "
+
+[node name="GameCodeSection" type="HBoxContainer" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel" unique_id=1315487327]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 10
+
+[node name="CodeLabel" type="Label" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel/GameCodeSection" unique_id=985249409]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 24
+text = "Code de la partie : "
+
+[node name="CodeValue" type="Label" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel/GameCodeSection" unique_id=1933047781]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0, 1)
+theme_override_fonts/font = ExtResource("2_pa41s")
+theme_override_font_sizes/font_size = 24
+text = "1234-5678"
+
+[node name="MarginContainer" type="MarginContainer" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel" unique_id=255459266]
+custom_minimum_size = Vector2(550, 110)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="rdy" type="Button" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel/MarginContainer" unique_id=968759029]
+custom_minimum_size = Vector2(350, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.8132577, 0.8132577, 0.81325763, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("14_r7mjf")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("13_r7mjf")
+theme_override_styles/pressed = ExtResource("14_cfg5i")
+theme_override_styles/hover = ExtResource("15_8i6uw")
+text = "JE SUIS PRET"
+
+[node name="Erreur" type="Label" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel/MarginContainer" unique_id=284782675]
+custom_minimum_size = Vector2(0, 27)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_pa41s")
+text = "Veuillez choisir une classe avant de vous mettre prêt"
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel" unique_id=352270163]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+
+[node name="quitter" type="Button" parent="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel/MarginContainer2" unique_id=1684009018]
+custom_minimum_size = Vector2(350, 70)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.8132577, 0.8132577, 0.81325763, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("14_r7mjf")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("13_r7mjf")
+theme_override_styles/pressed = ExtResource("14_cfg5i")
+theme_override_styles/hover = ExtResource("15_8i6uw")
+text = "QUITTER LE LOBBY
+"
+
+[connection signal="pressed" from="MainPanel/MarginContainer/Content/Info/MarginContainer/InfoPanel/MarginContainer2/quitter" to="." method="_on_lobby_leave_pressed"]

@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://bvyomdpcutofy"]
+
+[ext_resource type="Script" uid="uid://cyeg73k578s6" path="res://scenes/Dice/dice_manager.gd" id="1_fjhhh"]
+[ext_resource type="PackedScene" uid="uid://bujosk46iicr0" path="res://scenes/Dice/die.tscn" id="2_6qs0w"]
+[ext_resource type="Texture2D" uid="uid://cwpreu7u3vdd7" path="res://design_raw/ui_ux/menu/panel/des_fond.png" id="2_dmef7"]
+[ext_resource type="FontFile" uid="uid://bk0jn58jrpa0p" path="res://ressource/fonts/Minecraft 2.ttf" id="3_dmef7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dmef7"]
+texture = ExtResource("2_dmef7")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[node name="DiceManager" type="Control" unique_id=921236750]
+custom_minimum_size = Vector2(760, 500)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fjhhh")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=937771254]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.78431374)
+
+[node name="MenuFond" type="PanelContainer" parent="." unique_id=1654523799]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_dmef7")
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuFond" unique_id=789149702]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 13
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuFond/MarginContainer" unique_id=251876612]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="ResultLabel" type="Label" parent="MenuFond/MarginContainer/VBoxContainer" unique_id=1227525223]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_dmef7")
+theme_override_font_sizes/font_size = 64
+horizontal_alignment = 1
+
+[node name="DiceContainer" type="HBoxContainer" parent="MenuFond/MarginContainer/VBoxContainer" unique_id=56922015]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="SlotDe1" type="Control" parent="MenuFond/MarginContainer/VBoxContainer/DiceContainer" unique_id=839158457]
+custom_minimum_size = Vector2(260, 260)
+layout_mode = 2
+
+[node name="Die1" parent="MenuFond/MarginContainer/VBoxContainer/DiceContainer/SlotDe1" unique_id=1537685010 instance=ExtResource("2_6qs0w")]
+position = Vector2(130, 130)
+scale = Vector2(12, 12)
+
+[node name="SlotDe2" type="Control" parent="MenuFond/MarginContainer/VBoxContainer/DiceContainer" unique_id=1970392723]
+custom_minimum_size = Vector2(260, 260)
+layout_mode = 2
+
+[node name="Die2" parent="MenuFond/MarginContainer/VBoxContainer/DiceContainer/SlotDe2" unique_id=1875102545 instance=ExtResource("2_6qs0w")]
+position = Vector2(130, 130)
+scale = Vector2(12, 12)

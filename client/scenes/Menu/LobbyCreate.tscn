@@ -1,0 +1,569 @@
+[gd_scene format=3 uid="uid://bu7umf4sk3cl"]
+
+[ext_resource type="Script" uid="uid://dccofdv568qi8" path="res://scripts/lobby/lobby_create.gd" id="1_3wi6f"]
+[ext_resource type="Texture2D" uid="uid://co7cc3fig2e4w" path="res://design_raw/ui_ux/menu/create_lobby/border_background.png" id="2_3wi6f"]
+[ext_resource type="FontFile" uid="uid://mfwhpwxq8htj" path="res://ressource/fonts/Minecraft 2.ttf" id="2_jquy8"]
+[ext_resource type="Texture2D" uid="uid://b28voft8gcjyk" path="res://assets/models/board/Map1.png" id="4_oumfr"]
+[ext_resource type="Texture2D" uid="uid://cjm10wn0k5s25" path="res://design_raw/ui_ux/menu/create_lobby/arrow.png" id="5_n8t3k"]
+[ext_resource type="Texture2D" uid="uid://c0cpd84ur5ax3" path="res://design_raw/ui_ux/menu/create_lobby/border_select_map.png" id="6_n8t3k"]
+[ext_resource type="Texture2D" uid="uid://dj3262dqwn72t" path="res://design_raw/ui_ux/menu/create_lobby/arrow_right.png" id="8_16ws5"]
+[ext_resource type="Texture2D" uid="uid://doa852biixwcs" path="res://design_raw/ui_ux/menu/windows/btn_small.png" id="9_kt053"]
+[ext_resource type="FontFile" uid="uid://wcg3fbs7mqr0" path="res://design_raw/font/MinecraftBold.otf" id="9_n8t3k"]
+[ext_resource type="Texture2D" uid="uid://bepinc51q7xh6" path="res://design_raw/ui_ux/menu/create_lobby/btn_gold.jpg" id="10_16ws5"]
+[ext_resource type="FontFile" uid="uid://c4cse1ewgl82i" path="res://design_raw/font/Monocraft.ttf" id="10_n8t3k"]
+[ext_resource type="StyleBox" uid="uid://bndkfqj4pbf71" path="res://design_raw/ui_ux/styleBoxTexture/btn_small/btn_normal.tres" id="11_16ws5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kt053"]
+texture = ExtResource("2_3wi6f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x6r6l"]
+texture = ExtResource("5_n8t3k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0k1hf"]
+texture = ExtResource("5_n8t3k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5643l"]
+texture = ExtResource("5_n8t3k")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_llpk7"]
+texture = ExtResource("6_n8t3k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vpcdf"]
+texture = ExtResource("8_16ws5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_plrcw"]
+texture = ExtResource("8_16ws5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ij7dg"]
+texture = ExtResource("8_16ws5")
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kt053"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_16ws5"]
+texture = SubResource("CompressedTexture2D_kt053")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fhj6f"]
+texture = ExtResource("10_16ws5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t4wfq"]
+texture = ExtResource("9_kt053")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_n8t3k"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kdq6n"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wwu2f"]
+texture = SubResource("CompressedTexture2D_kdq6n")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8gpns"]
+texture = ExtResource("10_16ws5")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tgqwl"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vy43q"]
+texture = SubResource("CompressedTexture2D_tgqwl")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i4l36"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uh2cd"]
+texture = SubResource("CompressedTexture2D_i4l36")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6mjyx"]
+texture = ExtResource("10_16ws5")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mpq5w"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8kl3o"]
+texture = SubResource("CompressedTexture2D_mpq5w")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vw4d4"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ovnjn"]
+texture = SubResource("CompressedTexture2D_vw4d4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ova5w"]
+texture = ExtResource("10_16ws5")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_x6r6l"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tgqwl"]
+texture = SubResource("CompressedTexture2D_x6r6l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2xw17"]
+texture = ExtResource("10_16ws5")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qt465"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3fg5n"]
+texture = SubResource("CompressedTexture2D_qt465")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3wi6f"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n8t3k"]
+texture = SubResource("CompressedTexture2D_3wi6f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kdq6n"]
+texture = ExtResource("10_16ws5")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8gpns"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i4l36"]
+texture = SubResource("CompressedTexture2D_8gpns")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_16ws5"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wwu2f"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o2i1p"]
+texture = SubResource("CompressedTexture2D_wwu2f")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vw4d4"]
+texture = ExtResource("10_16ws5")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7p65h"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ltkda"]
+texture = SubResource("CompressedTexture2D_7p65h")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uh2cd"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mpq5w"]
+texture = SubResource("CompressedTexture2D_uh2cd")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qt465"]
+texture = ExtResource("10_16ws5")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3fg5n"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hv24w"]
+texture = SubResource("CompressedTexture2D_3fg5n")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ovnjn"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7p65h"]
+texture = SubResource("CompressedTexture2D_ovnjn")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_feigd"]
+texture = ExtResource("10_16ws5")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0k1hf"]
+load_path = "res://.godot/imported/btn_small.png-21f75686425a51fb46e05ec86eca7c07.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vwoor"]
+texture = SubResource("CompressedTexture2D_0k1hf")
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+expand_margin_right = 3.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ltkda"]
+load_path = "res://.godot/imported/btn.png-fa445319dea40236f5d1a2965a282dba.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_51jiu"]
+texture = SubResource("CompressedTexture2D_ltkda")
+expand_margin_left = 30.0
+expand_margin_right = 30.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6mjyx"]
+load_path = "res://.godot/imported/btn_press.png-b41d0ffec869b3e3d4151bba369ec8a2.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_firjl"]
+texture = SubResource("CompressedTexture2D_6mjyx")
+expand_margin_left = 30.0
+expand_margin_right = 30.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2xw17"]
+load_path = "res://.godot/imported/btn_select.png-6dea804daaa42e3e5d8f9681121c2296.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qbl4b"]
+texture = SubResource("CompressedTexture2D_2xw17")
+expand_margin_left = 30.0
+expand_margin_right = 30.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hv24w"]
+load_path = "res://.godot/imported/btn_select.png-6dea804daaa42e3e5d8f9681121c2296.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p8eh0"]
+texture = SubResource("CompressedTexture2D_hv24w")
+expand_margin_left = 30.0
+expand_margin_right = 30.0
+
+[node name="CreateLobbyMenu" type="Control" unique_id=509163845]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3wi6f")
+
+[node name="MainPanel" type="Panel" parent="." unique_id=1588017525]
+custom_minimum_size = Vector2(800, 992)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -538.5
+offset_right = 400.0
+offset_bottom = 538.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_kt053")
+
+[node name="Title" type="Label" parent="MainPanel" unique_id=1138345694]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 82.5
+offset_right = 617.0
+offset_bottom = 125.5
+size_flags_horizontal = 6
+theme_override_fonts/font = ExtResource("10_n8t3k")
+theme_override_font_sizes/font_size = 40
+text = "CREER UNE PARTIE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Content" type="VBoxContainer" parent="MainPanel" unique_id=981618232]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = 166.5
+offset_right = -15.0
+offset_bottom = 57.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+
+[node name="MapSection" type="VBoxContainer" parent="MainPanel/Content" unique_id=207290948]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="MapLabel" type="Label" parent="MainPanel/Content/MapSection" unique_id=307188720]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_jquy8")
+theme_override_font_sizes/font_size = 32
+text = "CARTE DU PLATEAU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="mapchoice" type="HBoxContainer" parent="MainPanel/Content/MapSection" unique_id=915932877]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_constants/separation = 40
+
+[node name="btn_arrow_left" type="Button" parent="MainPanel/Content/MapSection/mapchoice" unique_id=1149259463]
+custom_minimum_size = Vector2(42, 61)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_x6r6l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0k1hf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5643l")
+
+[node name="TextureRect" type="Panel" parent="MainPanel/Content/MapSection/mapchoice" unique_id=2029783790]
+clip_contents = true
+custom_minimum_size = Vector2(340, 189)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_llpk7")
+
+[node name="MapPreview" type="TextureRect" parent="MainPanel/Content/MapSection/mapchoice/TextureRect" unique_id=1130422662]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_oumfr")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="MainPanel/Content/MapSection/mapchoice/TextureRect" unique_id=1618175276]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_n8t3k")
+expand_mode = 1
+
+[node name="btn_arrow_right" type="Button" parent="MainPanel/Content/MapSection/mapchoice" unique_id=813101783]
+custom_minimum_size = Vector2(42, 61)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxTexture_vpcdf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_plrcw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ij7dg")
+
+[node name="ToursSection" type="VBoxContainer" parent="MainPanel/Content" unique_id=803418957]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="ToursLabel" type="Label" parent="MainPanel/Content/ToursSection" unique_id=1199821967]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_fonts/font = ExtResource("2_jquy8")
+theme_override_font_sizes/font_size = 32
+text = "NOMBRE DE TOURS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ToursContainer" type="HBoxContainer" parent="MainPanel/Content/ToursSection" unique_id=1739008269]
+custom_minimum_size = Vector2(610, 55)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="btn_ilimite" type="Button" parent="MainPanel/Content/ToursSection/ToursContainer" unique_id=361459365]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_n8t3k")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxTexture_16ws5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fhj6f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_t4wfq")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_n8t3k")
+text = "Ilimité"
+
+[node name="btn_20tours" type="Button" parent="MainPanel/Content/ToursSection/ToursContainer" unique_id=1653761180]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_n8t3k")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_wwu2f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8gpns")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vy43q")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_n8t3k")
+text = "20 TOURS"
+
+[node name="btn_30tours" type="Button" parent="MainPanel/Content/ToursSection/ToursContainer" unique_id=477920470]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_n8t3k")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_uh2cd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_6mjyx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8kl3o")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_n8t3k")
+text = "30 TOURS"
+
+[node name="btn_40tours" type="Button" parent="MainPanel/Content/ToursSection/ToursContainer" unique_id=1697343258]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_n8t3k")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_ovnjn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ova5w")
+theme_override_styles/hover = ExtResource("11_16ws5")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_n8t3k")
+text = "40 TOURS"
+
+[node name="btn_50tours" type="Button" parent="MainPanel/Content/ToursSection/ToursContainer" unique_id=763965158]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_n8t3k")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_tgqwl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2xw17")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3fg5n")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_n8t3k")
+text = "50 TOURS"
+
+[node name="ArgentSection" type="VBoxContainer" parent="MainPanel/Content" unique_id=858567840]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="ArgentLabel" type="Label" parent="MainPanel/Content/ArgentSection" unique_id=358208166]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("2_jquy8")
+theme_override_font_sizes/font_size = 32
+text = "ARGENT DE DEPART"
+horizontal_alignment = 1
+
+[node name="ArgentsContainer" type="HBoxContainer" parent="MainPanel/Content/ArgentSection" unique_id=386687782]
+custom_minimum_size = Vector2(610, 55)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="btn_1000M" type="Button" parent="MainPanel/Content/ArgentSection/ArgentsContainer" unique_id=1851740040]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_n8t3k")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_n8t3k")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kdq6n")
+theme_override_styles/hover = SubResource("StyleBoxTexture_i4l36")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_16ws5")
+text = "1000 M"
+
+[node name="btn_1500M" type="Button" parent="MainPanel/Content/ArgentSection/ArgentsContainer" unique_id=1974413093]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_n8t3k")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_o2i1p")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vw4d4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ltkda")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_16ws5")
+text = "1500 M"
+
+[node name="btn_2000M" type="Button" parent="MainPanel/Content/ArgentSection/ArgentsContainer" unique_id=10055952]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_n8t3k")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_mpq5w")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qt465")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hv24w")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_16ws5")
+text = "2000 M"
+
+[node name="btn_3000M" type="Button" parent="MainPanel/Content/ArgentSection/ArgentsContainer" unique_id=332063261]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_n8t3k")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("StyleBoxTexture_7p65h")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_feigd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vwoor")
+toggle_mode = true
+button_group = SubResource("ButtonGroup_16ws5")
+text = "3000 M"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel/Content" unique_id=992795564]
+custom_minimum_size = Vector2(0, 230)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="btn_create" type="Button" parent="MainPanel/Content/VBoxContainer" unique_id=2135778586]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_n8t3k")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_51jiu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_firjl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qbl4b")
+theme_override_styles/focus = SubResource("StyleBoxTexture_p8eh0")
+text = "CREER LA PARTIE"
+
+[node name="btn_leave" type="Button" parent="MainPanel/Content/VBoxContainer" unique_id=1919611289]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("9_n8t3k")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_51jiu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_firjl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qbl4b")
+theme_override_styles/focus = SubResource("StyleBoxTexture_p8eh0")
+text = "QUITTER"
+
+[connection signal="pressed" from="MainPanel/Content/MapSection/mapchoice/btn_arrow_left" to="." method="_on_fleche_pressed"]
+[connection signal="pressed" from="MainPanel/Content/MapSection/mapchoice/btn_arrow_right" to="." method="_on_fleche_pressed"]
+[connection signal="pressed" from="MainPanel/Content/ToursSection/ToursContainer/btn_ilimite" to="." method="_on_tours_button_pressed" binds= [-1]]
+[connection signal="pressed" from="MainPanel/Content/ToursSection/ToursContainer/btn_20tours" to="." method="_on_tours_button_pressed" binds= [20]]
+[connection signal="pressed" from="MainPanel/Content/ToursSection/ToursContainer/btn_30tours" to="." method="_on_tours_button_pressed" binds= [30]]
+[connection signal="pressed" from="MainPanel/Content/ToursSection/ToursContainer/btn_40tours" to="." method="_on_tours_button_pressed" binds= [40]]
+[connection signal="pressed" from="MainPanel/Content/ToursSection/ToursContainer/btn_50tours" to="." method="_on_tours_button_pressed" binds= [50]]
+[connection signal="pressed" from="MainPanel/Content/ArgentSection/ArgentsContainer/btn_1000M" to="." method="_on_money_button_pressed" binds= [1000]]
+[connection signal="pressed" from="MainPanel/Content/ArgentSection/ArgentsContainer/btn_1500M" to="." method="_on_money_button_pressed" binds= [1500]]
+[connection signal="pressed" from="MainPanel/Content/ArgentSection/ArgentsContainer/btn_2000M" to="." method="_on_money_button_pressed" binds= [2000]]
+[connection signal="pressed" from="MainPanel/Content/ArgentSection/ArgentsContainer/btn_3000M" to="." method="_on_money_button_pressed" binds= [3000]]
+[connection signal="pressed" from="MainPanel/Content/VBoxContainer/btn_create" to="." method="_on_create_lobby_pressed"]
+[connection signal="pressed" from="MainPanel/Content/VBoxContainer/btn_leave" to="." method="_on_leave_pressed"]

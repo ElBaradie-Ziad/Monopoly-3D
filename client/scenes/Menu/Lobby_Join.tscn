@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://b8qcf5j6cpmrn"]
+
+[ext_resource type="Script" uid="uid://bur3ulqy3gba5" path="res://scenes/Menu/LobbyJoin.gd" id="1_vq83e"]
+[ext_resource type="Texture2D" uid="uid://jh6bmiak425r" path="res://design_raw/ui_ux/menu/join_lobby/border_background.png" id="2_mfqi5"]
+[ext_resource type="FontFile" uid="uid://bk0jn58jrpa0p" path="res://ressource/fonts/Minecraft 2.ttf" id="2_y2kgw"]
+[ext_resource type="FontFile" uid="uid://wcg3fbs7mqr0" path="res://design_raw/font/MinecraftBold.otf" id="4_i6kh2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nhxme"]
+texture = ExtResource("2_mfqi5")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mfqi5"]
+load_path = "res://.godot/imported/input.png-37361f7277de7a1e4bfb4a227191fb0f.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i6kh2"]
+texture = SubResource("CompressedTexture2D_mfqi5")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n3g2l"]
+load_path = "res://.godot/imported/login_focus.png-719b3575ddc02406d511d991fab7088a.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_srjrd"]
+texture = SubResource("CompressedTexture2D_n3g2l")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0lkjr"]
+load_path = "res://.godot/imported/btn.png-fa445319dea40236f5d1a2965a282dba.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n3g2l"]
+texture = SubResource("CompressedTexture2D_0lkjr")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_srjrd"]
+load_path = "res://.godot/imported/btn_press.png-b41d0ffec869b3e3d4151bba369ec8a2.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ack7h"]
+texture = SubResource("CompressedTexture2D_srjrd")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_iiqx4"]
+load_path = "res://.godot/imported/btn_select.png-6dea804daaa42e3e5d8f9681121c2296.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_utbvp"]
+texture = SubResource("CompressedTexture2D_iiqx4")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m6k23"]
+load_path = "res://.godot/imported/btn_select.png-6dea804daaa42e3e5d8f9681121c2296.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vjtwo"]
+texture = SubResource("CompressedTexture2D_m6k23")
+
+[node name="LobbyJoin" type="Control" unique_id=473474588]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vq83e")
+
+[node name="Panel" type="Panel" parent="." unique_id=656301727]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 358.0
+offset_right = 961.0
+offset_bottom = 719.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_nhxme")
+
+[node name="Content" type="VBoxContainer" parent="Panel" unique_id=503742276]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 57.000008
+offset_right = 537.0
+offset_bottom = 322.0
+theme_override_constants/separation = 35
+
+[node name="TitleLabel" type="Label" parent="Panel/Content" unique_id=1391277572]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_y2kgw")
+theme_override_font_sizes/font_size = 30
+text = "REJOINDRE UN LOBBY"
+
+[node name="CodeSection" type="VBoxContainer" parent="Panel/Content" unique_id=615889823]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="CodeLabel" type="Label" parent="Panel/Content/CodeSection" unique_id=1551377002]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_y2kgw")
+theme_override_font_sizes/font_size = 24
+text = "CODE DU LOBBY :"
+
+[node name="CodeLineEdit" type="LineEdit" parent="Panel/Content/CodeSection" unique_id=1824570636]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_i6kh2")
+theme_override_styles/focus = SubResource("StyleBoxTexture_srjrd")
+placeholder_text = "ex: 123456"
+alignment = 1
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Panel/Content" unique_id=407846262]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="btn_join" type="Button" parent="Panel/Content/VBoxContainer" unique_id=1988287652]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_i6kh2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_n3g2l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ack7h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_utbvp")
+theme_override_styles/focus = SubResource("StyleBoxTexture_vjtwo")
+text = "REJOINDRE"
+
+[node name="btn_leave" type="Button" parent="Panel/Content/VBoxContainer" unique_id=875597805]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_i6kh2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxTexture_n3g2l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ack7h")
+theme_override_styles/hover = SubResource("StyleBoxTexture_utbvp")
+theme_override_styles/focus = SubResource("StyleBoxTexture_vjtwo")
+text = "QUITTER"
+
+[connection signal="pressed" from="Panel/Content/VBoxContainer/btn_join" to="." method="_on_join_button_pressed"]
+[connection signal="pressed" from="Panel/Content/VBoxContainer/btn_leave" to="." method="_on_back_button_pressed"]

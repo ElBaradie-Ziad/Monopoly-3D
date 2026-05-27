@@ -1,0 +1,10 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://cky2oq3phlujx"]
+
+[ext_resource type="Texture2D" uid="uid://c1q3ceuxuv8hq" path="res://design_raw/ui_ux/login_screen/login_focus.png" id="1_tqji6"]
+
+[resource]
+texture = ExtResource("1_tqji6")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0

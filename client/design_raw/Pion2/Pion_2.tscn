@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cq3dl83vpqbhy"]
+
+[ext_resource type="ArrayMesh" uid="uid://co5ura222x58v" path="res://design_raw/Pion2/Char02.obj" id="1_5w8l8"]
+[ext_resource type="Texture2D" uid="uid://b5hqrib8i4yhj" path="res://design_raw/Pion2/Char02.png" id="2_ecw3x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_14dk2"]
+albedo_texture = ExtResource("2_ecw3x")
+
+[node name="Pion2" type="Node3D" unique_id=412217024]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2110514095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00025343895, 5.0107017e-05, -0.00024152547)
+mesh = ExtResource("1_5w8l8")
+surface_material_override/0 = SubResource("StandardMaterial3D_14dk2")

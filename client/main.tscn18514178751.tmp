@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://b3x5ubmf1cnor"]
+
+[ext_resource type="Script" uid="uid://c4dql444rppsh" path="res://scripts/core_game/GameScene.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://2d8vo7ppnuds" path="res://scenes/board/sandbox_board.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bwu7s2k6wgdmt" path="res://ingame_hud.tscn" id="3_efxa6"]
+[ext_resource type="Script" uid="uid://bfhkrgm350uoh" path="res://scripts/HUD/ingame_hud.gd" id="4_dg77c"]
+[ext_resource type="Script" uid="uid://dfbrhibqse4fu" path="res://scripts/ui/GameUI.gd" id="4_w48qg"]
+[ext_resource type="PackedScene" uid="uid://bvyomdpcutofy" path="res://scenes/Dice/dice_manager.tscn" id="5_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://11y5av0brdb1" path="res://scenes/PopUp/achat.tscn" id="6_w48qg"]
+[ext_resource type="PackedScene" uid="uid://01ei3shr7o0g" path="res://scenes/PopUp/Commu_card_popup.tscn" id="7_vivmo"]
+[ext_resource type="Script" uid="uid://b8dvkxgqtfow3" path="res://scripts/PopUp/community_card_popup.gd" id="8_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://bg71mr2wb61d6" path="res://scenes/PopUp/chance_card_popup.tscn" id="9_yaehf"]
+[ext_resource type="PackedScene" uid="uid://c2u43jdbj1s8i" path="res://scenes/PopUp/taxe_luxe.tscn" id="10_074og"]
+[ext_resource type="PackedScene" uid="uid://c2w2pjnxsoc7s" path="res://scenes/PopUp/taxe_impot.tscn" id="11_cegan"]
+[ext_resource type="Script" uid="uid://chlk8pw8bp000" path="res://scripts/test/TestSimulateur.gd" id="12_dg77c"]
+[ext_resource type="PackedScene" uid="uid://ckcfvsqxwo5gg" path="res://scenes/PopUp/Actions_prison.tscn" id="13_ycdy4"]
+
+[node name="Main" type="Node3D" unique_id=531096083]
+script = ExtResource("1_0xm2m")
+
+[node name="TestSimulateur" type="Node" parent="." unique_id=479647109]
+script = ExtResource("12_dg77c")
+
+[node name="SandboxBoard" parent="." unique_id=1237468327 instance=ExtResource("1_ig7tw")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=80690366]
+script = ExtResource("4_w48qg")
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1284472602]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HUD" parent="CanvasLayer/Control" unique_id=678458745 instance=ExtResource("3_efxa6")]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 47.998
+anchor_bottom = 27.000002
+offset_right = 0.079956055
+offset_bottom = -0.00012207031
+grow_horizontal = 1
+grow_vertical = 1
+script = ExtResource("4_dg77c")
+
+[node name="DiceManager" parent="CanvasLayer/Control" unique_id=921236750 instance=ExtResource("5_ycdy4")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 47.984
+anchor_bottom = 26.855
+
+[node name="BuyPropertyPopup" parent="CanvasLayer/Control" unique_id=717188841 instance=ExtResource("6_w48qg")]
+visible = false
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 702.0
+offset_top = 346.0
+offset_right = 1222.0
+offset_bottom = 726.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="CommunityCardPopup" parent="CanvasLayer/Control" unique_id=1622542625 instance=ExtResource("7_vivmo")]
+visible = false
+layout_mode = 1
+offset_left = 937.0
+offset_top = 529.0
+offset_right = 937.0
+offset_bottom = 529.0
+script = ExtResource("8_2cqfq")
+
+[node name="ChanceCardPopup" parent="CanvasLayer/Control" unique_id=1157864850 instance=ExtResource("9_yaehf")]
+visible = false
+layout_mode = 1
+offset_left = 942.0
+offset_top = 526.0
+offset_right = 942.0
+offset_bottom = 526.0
+
+[node name="TaxeLuxe" parent="CanvasLayer/Control" unique_id=996045386 instance=ExtResource("10_074og")]
+visible = false
+layout_mode = 1
+offset_left = 951.0
+offset_top = 523.0
+offset_right = 951.0
+offset_bottom = 523.0
+
+[node name="TaxeImpot" parent="CanvasLayer/Control" unique_id=1946372172 instance=ExtResource("11_cegan")]
+visible = false
+layout_mode = 1
+offset_left = 942.0
+offset_top = 529.0
+offset_right = 942.0
+offset_bottom = 529.0
+
+[node name="Button" type="Button" parent="CanvasLayer/Control" unique_id=885395495]
+visible = false
+layout_mode = 0
+offset_left = 784.0
+offset_top = 799.0
+offset_right = 1114.0
+offset_bottom = 980.0
+text = "OK"
+
+[node name="ActionsPrison" parent="CanvasLayer/Control" unique_id=824236961 instance=ExtResource("13_ycdy4")]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 48.000004
+anchor_bottom = 27.000002
+offset_left = 707.0
+offset_top = 260.0
+offset_right = -693.0001
+offset_bottom = -370.00012

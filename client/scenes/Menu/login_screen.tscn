@@ -1,0 +1,238 @@
+[gd_scene format=3 uid="uid://1qjnhxfyiiw8"]
+
+[ext_resource type="Texture2D" uid="uid://bjcjl2s4jk0v3" path="res://design_raw/ui_ux/login_screen/background.png" id="1_6qx5y"]
+[ext_resource type="FontFile" uid="uid://mfwhpwxq8htj" path="res://ressource/fonts/Minecraft 2.ttf" id="2_g270c"]
+[ext_resource type="FontFile" uid="uid://c4cse1ewgl82i" path="res://design_raw/font/Monocraft.ttf" id="3_41j0t"]
+[ext_resource type="Script" uid="uid://cef7gyxdpbx31" path="res://scripts/Connexion/login.gd" id="4_g270c"]
+[ext_resource type="FontFile" uid="uid://qmpo1m57xo05" path="res://design_raw/font/minecraft-bold-basic.otf" id="5_6qx5y"]
+[ext_resource type="Script" uid="uid://b6mjqexj5eiuh" path="res://scripts/Connexion/register.gd" id="5_np7ol"]
+[ext_resource type="Texture2D" uid="uid://bqawjq43rcpc3" path="res://design_raw/ui_ux/login_screen/windows.png" id="8_q788x"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sxi1f"]
+texture = ExtResource("8_q788x")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_41j0t"]
+load_path = "res://.godot/imported/input.png-37361f7277de7a1e4bfb4a227191fb0f.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ouk8p"]
+texture = SubResource("CompressedTexture2D_41j0t")
+texture_margin_left = 20.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eoeli"]
+load_path = "res://.godot/imported/login_focus.png-719b3575ddc02406d511d991fab7088a.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kux1k"]
+texture = SubResource("CompressedTexture2D_eoeli")
+texture_margin_left = 20.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_57ur2"]
+load_path = "res://.godot/imported/input.png-37361f7277de7a1e4bfb4a227191fb0f.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ty50"]
+texture = SubResource("CompressedTexture2D_57ur2")
+texture_margin_left = 20.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6mrmg"]
+load_path = "res://.godot/imported/login_focus.png-719b3575ddc02406d511d991fab7088a.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eoeli"]
+texture = SubResource("CompressedTexture2D_6mrmg")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6ty50"]
+load_path = "res://.godot/imported/btn.png-fa445319dea40236f5d1a2965a282dba.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_41j0t"]
+texture = SubResource("CompressedTexture2D_6ty50")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_18qdo"]
+load_path = "res://.godot/imported/btn_press.png-b41d0ffec869b3e3d4151bba369ec8a2.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pwgfm"]
+texture = SubResource("CompressedTexture2D_18qdo")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_svsjf"]
+load_path = "res://.godot/imported/btn_select.png-6dea804daaa42e3e5d8f9681121c2296.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xar5p"]
+texture = SubResource("CompressedTexture2D_svsjf")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ftyea"]
+load_path = "res://.godot/imported/btn_select.png-6dea804daaa42e3e5d8f9681121c2296.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bdflb"]
+texture = SubResource("CompressedTexture2D_ftyea")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6qx5y"]
+load_path = "res://.godot/imported/btn.png-fa445319dea40236f5d1a2965a282dba.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q788x"]
+texture = SubResource("CompressedTexture2D_6qx5y")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sxi1f"]
+load_path = "res://.godot/imported/btn_press.png-b41d0ffec869b3e3d4151bba369ec8a2.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_57ur2"]
+texture = SubResource("CompressedTexture2D_sxi1f")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pwgfm"]
+load_path = "res://.godot/imported/btn_select.png-6dea804daaa42e3e5d8f9681121c2296.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1mb4"]
+texture = SubResource("CompressedTexture2D_pwgfm")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_53l8x"]
+load_path = "res://.godot/imported/btn_select.png-6dea804daaa42e3e5d8f9681121c2296.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rqv82"]
+texture = SubResource("CompressedTexture2D_53l8x")
+
+[node name="Control" type="Control" unique_id=949147591]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1699691089]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 156.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6qx5y")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextureRect2" type="Panel" parent="." unique_id=1042833543]
+custom_minimum_size = Vector2(653, 700)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -326.5
+offset_top = -350.0
+offset_right = 326.5
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_sxi1f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect2" unique_id=899887008]
+layout_mode = 0
+offset_left = 104.75139
+offset_top = 240.26312
+offset_right = 503.27246
+offset_bottom = 428.81976
+scale = Vector2(1.1021829, 1.1612536)
+theme_override_constants/separation = 15
+
+[node name="Pseudo" type="VBoxContainer" parent="TextureRect2/VBoxContainer" unique_id=1041930496]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="TextureRect2/VBoxContainer/Pseudo" unique_id=1562543674]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_41j0t")
+theme_override_font_sizes/font_size = 22
+text = "PSEUDO"
+
+[node name="inputPseudo" type="LineEdit" parent="TextureRect2/VBoxContainer/Pseudo" unique_id=1384144367]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_41j0t")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_ouk8p")
+theme_override_styles/focus = SubResource("StyleBoxTexture_kux1k")
+placeholder_text = "Saisir votre pseudo"
+
+[node name="Password" type="VBoxContainer" parent="TextureRect2/VBoxContainer" unique_id=1147129049]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="TextureRect2/VBoxContainer/Password" unique_id=906465568]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("3_41j0t")
+theme_override_font_sizes/font_size = 22
+text = "MOT DE PASSE"
+
+[node name="inputPassword" type="LineEdit" parent="TextureRect2/VBoxContainer/Password" unique_id=761697113]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("3_41j0t")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxTexture_6ty50")
+theme_override_styles/focus = SubResource("StyleBoxTexture_eoeli")
+placeholder_text = "Saisir votre mot de passe"
+secret = true
+secret_character = "*"
+
+[node name="Error" type="Label" parent="TextureRect2/VBoxContainer" unique_id=619760566]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_g270c")
+theme_override_font_sizes/font_size = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect2/VBoxContainer" unique_id=754551482]
+custom_minimum_size = Vector2(400, 70)
+layout_mode = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="log_in" type="Button" parent="TextureRect2/VBoxContainer/HBoxContainer" unique_id=1925356367]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("5_6qx5y")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_41j0t")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pwgfm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xar5p")
+theme_override_styles/focus = SubResource("StyleBoxTexture_bdflb")
+text = "SE CONNECTER"
+script = ExtResource("4_g270c")
+
+[node name="sign_in" type="Button" parent="TextureRect2/VBoxContainer/HBoxContainer" unique_id=241514231]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("5_6qx5y")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_q788x")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_57ur2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_i1mb4")
+theme_override_styles/focus = SubResource("StyleBoxTexture_rqv82")
+text = "CREER UN COMPTE"
+script = ExtResource("5_np7ol")
+
+[connection signal="pressed" from="TextureRect2/VBoxContainer/HBoxContainer/log_in" to="TextureRect2/VBoxContainer/HBoxContainer/log_in" method="_on_join_button_pressed"]
+[connection signal="pressed" from="TextureRect2/VBoxContainer/HBoxContainer/sign_in" to="TextureRect2/VBoxContainer/HBoxContainer/sign_in" method="_on_btn_create_account_pressed"]

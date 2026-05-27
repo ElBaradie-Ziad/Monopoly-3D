@@ -1,0 +1,39 @@
+services:
+  db:
+    image: postgres:16
+    container_name: monopoly-db
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "${POSTGRES_PORT:-5433}:5432"
+    volumes:
+      - monopoly_pgdata:/var/lib/postgresql/data
+      - ./database/scripts/00_schema.sql:/docker-entrypoint-initdb.d/00_schema.sql:ro
+      - ./database/scripts/01_indexes.sql:/docker-entrypoint-initdb.d/01_indexes.sql:ro
+      - ./database/scripts/02_donnees_test.sql:/docker-entrypoint-initdb.d/02_donnees_test.sql:ro
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  server:
+    build:
+      context: .
+      dockerfile: server/Dockerfile
+    container_name: monopoly-server
+    restart: unless-stopped
+
+    depends_on:
+      db:
+        condition: service_healthy
+
+    env_file:
+      - .env
+    ports:
+      - "10000:10000"
+
+volumes:
+  monopoly_pgdata:

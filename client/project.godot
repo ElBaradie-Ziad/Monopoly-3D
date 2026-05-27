@@ -1,0 +1,45 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="monopoly-engine"
+run/main_scene="uid://1qjnhxfyiiw8"
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://2yd8wjn2ny51"
+Reseau="*uid://b43pmbimkoj7h"
+GameData="*uid://dl3i3cdibam0w"
+UiAnimationManager="*uid://u8gh4vl00y87"
+SoundManager="*uid://bk6i7fqqj27ll"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[gui]
+
+theme/custom_font="uid://c4cse1ewgl82i"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true
+lights_and_shadows/positional_shadow/atlas_size.mobile=256

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ddiiwpuvuwu3h"]
+
+[ext_resource type="PackedScene" uid="uid://pdvt2tjjefps" path="res://assets/models/board/plateau_gen.glb" id="1_obrha"]
+[ext_resource type="Texture2D" uid="uid://b62nv4v81ibiq" path="res://assets/models/board/Board3.jpg" id="2_u7ejq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d45j4"]
+albedo_texture = ExtResource("2_u7ejq")
+albedo_texture_force_srgb = true
+texture_filter = 0
+
+[node name="plateau_gen" unique_id=306472077 instance=ExtResource("1_obrha")]
+
+[node name="Plane" parent="." index="0" unique_id=1046178102]
+surface_material_override/0 = SubResource("StandardMaterial3D_d45j4")

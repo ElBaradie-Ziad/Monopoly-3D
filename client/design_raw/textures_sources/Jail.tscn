@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://buhrgaugqem56"]
+
+[ext_resource type="ArrayMesh" uid="uid://c6mbpsobw1o13" path="res://design_raw/textures_sources/jail_v1.obj" id="1_hpoek"]
+
+[node name="Jail" type="Node3D" unique_id=1041050823]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=508277358]
+mesh = ExtResource("1_hpoek")

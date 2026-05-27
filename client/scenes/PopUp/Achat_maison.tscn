@@ -1,0 +1,288 @@
+[gd_scene format=3 uid="uid://i14k7mpg8lgc"]
+
+[ext_resource type="Texture2D" uid="uid://b5v8s0obcb1d8" path="res://design_raw/ui_ux/PopUp/Construction_Maison/Maison_Pop_Up.png" id="1_rqco0"]
+[ext_resource type="FontFile" uid="uid://bk0jn58jrpa0p" path="res://ressource/fonts/Minecraft 2.ttf" id="2_u8iax"]
+[ext_resource type="Texture2D" uid="uid://cj2dl3r072lsw" path="res://design_raw/ui_ux/PopUp/Construction_Maison/moinsButton.png" id="4_rqco0"]
+[ext_resource type="Texture2D" uid="uid://mb8anckjr8ip" path="res://design_raw/ui_ux/menu/btn_press.png" id="5_j67gm"]
+[ext_resource type="Texture2D" uid="uid://d2578v5o2lige" path="res://design_raw/ui_ux/PopUp/Construction_Maison/plusButton.png" id="6_cpdsb"]
+[ext_resource type="Script" uid="uid://c07qyln7ossg6" path="res://scripts/Buttons/controlbutton_animation.gd" id="6_jn1gb"]
+
+[node name="AchatMaison" type="Control" unique_id=1059735512]
+custom_minimum_size = Vector2(520, 450)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -423.5
+offset_top = -357.5
+offset_right = 423.5
+offset_bottom = 357.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Frame" type="TextureRect" parent="." unique_id=2088683701]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rqco0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=61592216]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 180
+theme_override_constants/margin_top = 240
+theme_override_constants/margin_right = 170
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1991372285]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Header" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=573630627]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Nom" type="Label" parent="MarginContainer/VBoxContainer/Header" unique_id=186000197]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_u8iax")
+theme_override_font_sizes/font_size = 30
+text = "BOULEVARD DE BELLEVILLE"
+horizontal_alignment = 1
+
+[node name="Owner" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1609344461]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="label" type="Label" parent="MarginContainer/VBoxContainer/Owner" unique_id=405647415]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_u8iax")
+theme_override_font_sizes/font_size = 24
+text = "Maisons actuelles :"
+horizontal_alignment = 1
+
+[node name="owner" type="Label" parent="MarginContainer/VBoxContainer/Owner" unique_id=793489062]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_u8iax")
+theme_override_font_sizes/font_size = 24
+text = "2"
+horizontal_alignment = 1
+
+[node name="PriceBlock" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=693807966]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="BuyPrice" type="Label" parent="MarginContainer/VBoxContainer/PriceBlock" unique_id=188937171]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84313726, 0.011764706, 1)
+theme_override_fonts/font = ExtResource("2_u8iax")
+theme_override_font_sizes/font_size = 24
+text = "Prix à Payer : 0 M"
+horizontal_alignment = 1
+
+[node name="HouseSelector" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1892427016]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="MinusControl" type="Control" parent="MarginContainer/VBoxContainer/HouseSelector" unique_id=1017765963]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+script = ExtResource("6_jn1gb")
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/HouseSelector/MinusControl" unique_id=1420556404]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Minus" type="TextureButton" parent="MarginContainer/VBoxContainer/HouseSelector/MinusControl" unique_id=969495662]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("4_rqco0")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="HouseNumber" type="Control" parent="MarginContainer/VBoxContainer/HouseSelector" unique_id=1286616540]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+
+[node name="Frame" type="TextureRect" parent="MarginContainer/VBoxContainer/HouseSelector/HouseNumber" unique_id=1167255071]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_j67gm")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HouseSelector/HouseNumber" unique_id=1245534214]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -7.0
+offset_top = -16.0
+offset_right = 7.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_u8iax")
+theme_override_font_sizes/font_size = 32
+text = "0"
+
+[node name="PlusControl" type="Control" parent="MarginContainer/VBoxContainer/HouseSelector" unique_id=619934996]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+script = ExtResource("6_jn1gb")
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/HouseSelector/PlusControl" unique_id=26258000]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Plus" type="TextureButton" parent="MarginContainer/VBoxContainer/HouseSelector/PlusControl" unique_id=642058625]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("6_cpdsb")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer" unique_id=2034598718]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="VBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1738170290]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="AcheterControl" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=801862525]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 2
+script = ExtResource("6_jn1gb")
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/VBoxContainer/AcheterControl" unique_id=2046726554]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Acheter" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainer/AcheterControl" unique_id=968275019]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_j67gm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/AcheterControl" unique_id=1177122495]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -30.5
+offset_top = -11.5
+offset_right = 30.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_u8iax")
+theme_override_font_sizes/font_size = 24
+text = "Acheter"
+
+[node name="PasserControl" type="Control" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1052304601]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 2
+script = ExtResource("6_jn1gb")
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/VBoxContainer/VBoxContainer/PasserControl" unique_id=790005078]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Button" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainer/PasserControl" unique_id=1997708717]
+custom_minimum_size = Vector2(150, 70)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("5_j67gm")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainer/PasserControl" unique_id=1507902140]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_u8iax")
+theme_override_font_sizes/font_size = 24
+text = "Passer"
